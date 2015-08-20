@@ -3,6 +3,58 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/* Custom Styles */
+
+/* Navbar Styles */
+
+.navbar-inverse {
+    background-color: black;
+    border-color: #090909;
+    min-height: 127px;
+    border-bottom: 10px solid #f8d63e;
+    padding: 0px 42px;
+}
+
+.main-logo {
+  width: 100%;
+}
+
+
+/* End Custom Styles*/
+
+/* Custom Mobile Styles */
+
+/* Extra Small Devices, Phones */
+@media(max-width : 480px) {
+
+    .navbar-inverse {
+      padding: 0px;
+      min-height: 95px;
+      border-bottom: 3px solid #f8d63e;
+    }
+
+    .main-logo {
+      width: 70%;
+    }
+  
+
+}
+
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: @screen-sm-min) { 
+//     .navbar-inverse {
+//       padding: 0px 10px;
+//     }
+// }
+
+/* Medium devices (desktops, 992px and up) */
+// @media (min-width: @screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+// @media (min-width: @screen-lg-min) { }
+
+/* End Custom Mobile Styles*/
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
