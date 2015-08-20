@@ -7,7 +7,22 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
+/* Mixin */
+
+@mixin linear-gradient($direction, $top, $bottom) {
+  background: -webkit-linear-gradient($direction, $top, $bottom);
+  background: -moz-linear-gradient($direction, $top, $bottom);
+  background: -ms-linear-gradient($direction, $top, $bottom);
+  background: linear-gradient(to bottom, $top, $bottom);
+}
+
 /* Custom Styles */
+
+/* Global Styles */
+
+html {
+  font-family: 'Helvetica Neue';
+}
 
 /* Navbar Styles */
 
@@ -31,7 +46,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
     -moz-background-size: contain;
     background-size: contain;
     -o-background-size: contain;
-    height:3000px;
+    height:615px;
     position: relative;
 }
 
@@ -54,9 +69,14 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
       padding-bottom: 11px;
     }
 
+    .btn-group{
+        display: block;
+    }
+
     button{
-       background: linear-gradient(to bottom,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
-      color: #333!important;
+       // background: linear-gradient(to bottom,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      color: #333;
       border-top: 1px solid rgba(225,187,1,0.6);
       border-right: 1px solid rgba(225,187,1,0.8);
       border-bottom: 1px solid rgba(225,187,1,0.9);
@@ -68,6 +88,35 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
       width: 261px;
       letter-spacing: 2px;
       margin-top: 20px;
+    }
+
+      .btn:active{
+      outline: 0;
+       @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      box-shadow: none;
+    }
+}
+
+.dropdown-menu {
+   @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    box-shadow: none;
+
+    li a{
+      font-weight: bold;
+      border-bottom: 1px solid black;
+       padding: 11px 20px;
+    }
+
+    li a:hover, li a:visited, li a:active{
+         @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
     }
 }
 
