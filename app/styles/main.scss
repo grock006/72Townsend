@@ -1,6 +1,10 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/font-awesome/fonts";
+// @import "font-awesome/scss/font-awesome";
+
+// $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
 // endbower
 
 /* Custom Styles */
@@ -28,11 +32,43 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     background-size: contain;
     -o-background-size: contain;
     height:3000px;
+    position: relative;
 }
 
 .landing-wrapper {
     margin-top:124px;
     background-color:black;
+}
+
+.button-wrapper {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+
+    h3{
+      color: white;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 4px;
+      padding-bottom: 11px;
+    }
+
+    button{
+       background: linear-gradient(to bottom,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      color: #333!important;
+      border-top: 1px solid rgba(225,187,1,0.6);
+      border-right: 1px solid rgba(225,187,1,0.8);
+      border-bottom: 1px solid rgba(225,187,1,0.9);
+      border-left: 1px solid rgba(225,187,1,0.8);
+      font-weight: bold;
+      padding: 11px 20px;
+      margin-top: 10px;
+      display: block;
+      width: 261px;
+      letter-spacing: 2px;
+      margin-top: 20px;
+    }
 }
 
 
