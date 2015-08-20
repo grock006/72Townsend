@@ -19,13 +19,29 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   width: 100%;
 }
 
+/*  Landing Page Styles */
+
+.main-building-image {
+    background: url('../images/72Townsend_EastView.png') no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
+    height:3000px;
+}
+
+.landing-wrapper {
+    margin-top:124px;
+    background-color:black;
+}
+
 
 /* End Custom Styles*/
 
 /* Custom Mobile Styles */
 
 /* Extra Small Devices, Phones */
-@media(max-width : 480px) {
+@media (max-width : 480px) {
 
     .navbar-inverse {
       padding: 0px;
@@ -39,19 +55,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   
 
 }
-
-/* Small devices (tablets, 768px and up) */
-// @media (min-width: @screen-sm-min) { 
-//     .navbar-inverse {
-//       padding: 0px 10px;
-//     }
-// }
-
-/* Medium devices (desktops, 992px and up) */
-// @media (min-width: @screen-md-min) { }
-
-/* Large devices (large desktops, 1200px and up) */
-// @media (min-width: @screen-lg-min) { }
 
 /* End Custom Mobile Styles*/
 
