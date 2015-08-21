@@ -29,11 +29,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .state('list', {
+        url: '/list',
+        templateUrl: 'views/list.html',
+        controller: 'ListCtrl',
+        controllerAs: 'list'
       });
      
     $urlRouterProvider.otherwise('/');

@@ -8,7 +8,7 @@
  * Controller of the 72TownsendApp
  */
 angular.module('72TownsendApp')
-  .controller('AboutCtrl', function () {
+  .controller('ListCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
