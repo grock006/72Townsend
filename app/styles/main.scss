@@ -27,6 +27,13 @@ html {
     background-color:black;
 }
 
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: none;
+}
 
 /* Navbar Styles */
 
@@ -125,6 +132,52 @@ html {
     }
 }
 
+/* List Styles */
+
+.list-wrapper{
+    margin-top:11%;
+}
+
+.select-group {
+    margin-top:15%;
+  
+    select{
+      @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      color: #333;
+      border-top: 1px solid rgba(225,187,1,0.6);
+      border-right: 1px solid rgba(225,187,1,0.8);
+      border-bottom: 1px solid rgba(225,187,1,0.9);
+      border-left: 1px solid rgba(225,187,1,0.8);
+      font-weight: bold;
+      padding: 11px 64px;
+      text-transform: uppercase;
+      width: 100%;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+}
+
+.list-group-item{
+    
+    button {
+      @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+      color: #333;
+      border-top: 1px solid rgba(225,187,1,0.6);
+      border-right: 1px solid rgba(225,187,1,0.8);
+      border-bottom: 1px solid rgba(225,187,1,0.9);
+      border-left: 1px solid rgba(225,187,1,0.8);
+      font-weight: bold; 
+      padding: 8% 10%;
+      text-transform: uppercase;
+      margin-top: 64%;
+      margin-bottom: 15%;
+      font-size: 12px;
+      letter-spacing: 2px;  
+    }
+
+}
 
 /* End Custom Styles*/
 
@@ -200,6 +253,11 @@ html {
 
     }
 
+    /* List Styles */
+
+    .select-group {
+      margin-top:27%;
+    }
 
 }
 
@@ -245,9 +303,9 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
+// .container-narrow > hr {
+//   margin: 30px 0;
+// }
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -271,9 +329,9 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+  // .container {
+  //   max-width: 730px;
+  // }
 
   /* Remove the padding we set earlier */
   .header,
