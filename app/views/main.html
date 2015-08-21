@@ -1,6 +1,4 @@
-<!-- desktop landing -->
-<!-- <img src="images/72Townsend_EastView.png" style="width: 134%;margin-top: 107px;margin-left: -72px;" class="hidden-xs"> -->
-
+desktop landing -->
 <div class="landing-wrapper">
   <div class="main-building-image hidden-xs">
           <div class="button-wrapper">
@@ -36,38 +34,55 @@
         </div>       
   </div>
 </div>
-  
-  <!-- <div class="opaque-bar text-center hidden-xs">
-        <div style="position:absolute; top: 10%; left:10%">
-              <h3>EXPLORE 72 TOWNSEND</h3>
-                  <button class="btn btn-default bedroom-button">BEDROOMS  <i class="fa fa-chevron-down"></i></button>
-                  <button class="btn btn-default bedroom-button">FLOOR  <i class="fa fa-chevron-down"></i></button>
-        </div>        
-  </div> -->
-<!-- </div> -->
-
 <!-- end desktop landing -->
+<!-- mobile landing -->
+  <div style="background-color:black hidden-md hidden-lg">
+    <div style="height: 218px" class="hidden-md hidden-lg">
+    <carousel interval="0" class="hidden-md hidden-lg" >
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+       <!--  <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div> -->
+      </slide>
+    </carousel>
+  </div>
 
-<!-- <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div> -->
+<br>
+<br>
+<br>
+<div class="container">
+      <div class="mobile-button-wrapper hidden-md hidden-lg">
+        
+        <div class="btn-group-vertical">
+                  <h3 class="hidden-md hidden-lg">EXPLORE 72 TOWNSEND</h3>
+                  <div class="btn-group" dropdown>
+                      <button type="button" class="btn" dropdown-toggle>
+                        BEDROOMS  <i class="fa fa-chevron-down"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                        <li><a href="#">1 BEDROOM</a></li>
+                        <li><a href="#">2 BEDROOM</a></li>
+                        <li><a href="#">3 BEDROOM</a></li>
+                      </ul>
+                    </div>
+                    <br>
+                    <div class="btn-group" dropdown>
+                      <button type="button" class="btn" dropdown-toggle>
+                        FLOOR  <i class="fa fa-chevron-down"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                          <li><a href="#">FLOOR 3</a></li>
+                          <li><a href="#">FLOOR 4</a></li>
+                          <li><a href="#">FLOOR 5</a></li>
+                          <li><a href="#">FLOOR 6</a></li>
+                          <li><a href="#">FLOOR 7</a></li>
+                          <li><a href="#">FLOOR 8</a></li>
+                          <li><a href="#">FLOOR 9</a></li>
+                      </ul>
+                    </div>
+          </div>
+  
+    </div>
+<!-- mobile -->
