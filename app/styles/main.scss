@@ -120,6 +120,7 @@ html {
     padding: 0px;
     font-size: 14px;
     box-shadow: none;
+    cursor:pointer;
 
     li a{
       font-weight: bold;
@@ -177,6 +178,43 @@ html {
       letter-spacing: 2px;  
     }
 
+}
+
+/* Unit Styles */
+
+.unit-wrapper{
+    margin-top:15%;
+}
+
+.yellow-border{
+    border: 1px solid #f8d63e;;
+    padding: 20px;
+}
+
+.yellow-border h2{
+    line-height: 15px;
+}
+
+h2 {
+    color: white;
+    font-size: 13px;
+}
+
+hr{
+    width: 75%;
+    border-bottom: 1px solid #f8d63e;
+    border-top: none;
+}
+
+.balcony-button {
+    @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    color: #333;
+    border-top: 1px solid rgba(225,187,1,0.6);
+    border-right: 1px solid rgba(225,187,1,0.8);
+    border-bottom: 1px solid rgba(225,187,1,0.9);
+    border-left: 1px solid rgba(225,187,1,0.8);
+    font-weight: bold;
+    padding: 11px 20px;
 }
 
 /* End Custom Styles*/

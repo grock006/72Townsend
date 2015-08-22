@@ -1,5 +1,5 @@
-desktop -->
-<div class="container">
+<!-- desktop -->
+<div class="container" ng-hide="listHidden">
         <div class="row list-wrapper"> 
             <!-- lower-top -->
             <div class="col-md-4">
@@ -7,16 +7,8 @@ desktop -->
                  <div class="row">
                     <div class="col-md-10 select-group">
                      
-                      <!--   <button class="btn btn-default search-button">2 BEDROOMS    
-                            <i class="fa fa-chevron-down"></i>
-                        </button>
-                        <br>
-                       <button class="btn btn-default search-button">SORT BY: FLOOR    
-                            <i class="fa fa-chevron-down"></i>
-                        </button>   -->
-
-
                          <select ng-model="bedrooms" class="form-control">
+                              <option value="">All Bedrooms</option>  
                               <option value="1">1 Bedroom</option>
                               <option value="2">2 Bedrooms</option>
                               <option value="3">3 Bedrooms</option>
@@ -38,7 +30,7 @@ desktop -->
 
             <div class="col-md-8  list-group">
             
-            <div ng-repeat="item in test | filter:{bedrooms:bedrooms} | orderBy:sort">
+            <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | orderBy:sort ))">
               <div class="row list-group-item">
                     <div class="col-md-3 hidden-xs">
                           <img ng-src="{{item.image}}" style="width:85%" class="img-thumbnail"> 
@@ -53,7 +45,7 @@ desktop -->
                     </div>
                 
                     <div class="col-md-3 col-sm-5 col-xs-5">
-                         <button class="btn btn-default detail-button">VIEW DETAILS    
+                         <button class="btn btn-default detail-button" ng-click="showUnit(filteredItems, $index)">VIEW DETAILS    
                             <i class="fa fa-chevron-right"></i></button>
                     </div>
                     <div class="col-sm-1 col-xs-1"></div>
@@ -65,4 +57,75 @@ desktop -->
     </div>
 </div>
 
-<!-- end desktop
+<!-- end desktop -->
+ <!-- desktop -->
+ <div class="container" ng-show="listHidden">
+    <div class="row unit-wrapper" class="hidden-xs">
+        <div class="col-md-1 text-center hidden-xs">
+        
+          <!--   <button class="btn btn-default balcony-button" class="balcony-button" ng-click="listHidden = !listHidden"
+            style="position: relative;top: 200px;z-index: 1000000;left: 229px;">
+                <i class="fa fa-chevron-left"></i> BACK TO LIST
+             </button>     -->
+        
+        </div>
+        <div class="col-md-3 text-center hidden-xs">
+            <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.plan}}</h1>
+            <div class="yellow-border">
+                <h2>{{unit.squarefoot}} SQ. FT</h2>
+                <hr>
+                <h2>BEDROOMS<br> {{unit.bedrooms}}</h2>
+                <hr>
+                <h2>FULL BATHS<br> {{unit.bathrooms}}</h2>
+                <hr>
+                <h2>GOURMET KITCHEN WITH PENINSULA</h2>
+                <hr>
+                <h2>SPACIOUS GREAT ROOM WITH PENINSULA</h2>
+                <hr>
+                <button class="btn btn-default balcony-button" class="balcony-button">BALCONY VIEW
+                    <i class="fa fa-camera"></i>
+                </button>
+            </div>
+            <br>
+        </div>
+
+        <div class="col-md-8 hidden-xs" style="position:relative;width:700px">
+            <div class="row">
+                <div class="col-md-12">
+            
+                     <button class="btn btn-default balcony-button" ng-click="listHidden = !listHidden">
+                        <i class="fa fa-chevron-left"></i> BACK TO LIST
+                     </button>   
+
+                     <button class="btn btn-default balcony-button" class="balcony-button" 
+                     ng-click="showPrevious(filteredList, unitIndex)"
+                     ng-if="unitIndex > 0">
+                        <i class="fa fa-chevron-left"></i> PREVIOUS 
+                     </button>            
+            
+                      <button class="btn btn-default balcony-button" ng-click="showNext(filteredList, unitIndex)"
+                        ng-if="filteredList.length > unitIndex + 1"> NEXT
+                        <i class="fa fa-chevron-right"></i>
+                      </button> 
+
+                </div>
+            </div>
+
+            <img ng-src="{{unit.image}}">
+
+            <!-- <button class="btn btn-default balcony-button" class="balcony-button" ng-click="showPrevious(filteredList, unitIndex)"
+            ng-if="unitIndex > 0"
+            style="position:absolute;top:16%;right:0%;">
+                <i class="fa fa-chevron-left"></i> PREVIOUS 
+             </button>            
+            <button class="btn btn-default balcony-button" class="balcony-button" ng-click="showNext(filteredList, unitIndex)"
+            ng-if="filteredList.length > unitIndex + 1"
+            style="position:absolute;top:16%;right:-15%"> NEXT
+                <i class="fa fa-chevron-right"></i>
+            </button>
+         -->
+
+        </div>
+    </div>
+</div>
+    <!-- desktop -->

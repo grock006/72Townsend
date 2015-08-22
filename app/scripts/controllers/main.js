@@ -8,17 +8,21 @@
  * Controller of the 72TownsendApp
  */
 angular.module('72TownsendApp')
-  .controller('MainCtrl', function($scope) {
+  .controller('MainCtrl', function($scope, $state, $rootScope) {
     
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.selectBedrooms = function selectBedrooms(num){
+        var number = num.toString();
+        $rootScope.bedrooms = number;
+
+        $state.go('list');
+    }
+
+    // console.log($scope.bedrooms)
   
     $scope.slides = [ {image: "../../images/mobile_landing_one.png"},
     				  {image: "../../images/mobile_north.png"},
     				  {image: "../../images/mobile_west.png"},
-    				  {image: "../../images/mobile_south.png"}]
+    				  {image: "../../images/mobile_south.png"}]          
 
   });

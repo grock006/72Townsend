@@ -1,14 +1,30 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name 72TownsendApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the 72TownsendApp
- */
 angular.module('72TownsendApp')
-  .controller('ListCtrl', function($scope) {
+  .controller('ListCtrl', function($rootScope, $scope) {
+
+  	//init setting for 'sort by'
+  	$scope.sort = "floor";
+  	$scope.listHidden = false;
+
+  	$scope.showUnit = function showUnit(filteredItems, index){  		
+  		$scope.unitIndex = index;
+  		$scope.filteredList = filteredItems;
+  		$scope.unit = filteredItems[index];
+
+  		$scope.listHidden = true;
+  	}
+
+  	$scope.showNext = function showNext(filteredList, unitIndex){
+  		$scope.unit = filteredList[unitIndex + 1];
+  		$scope.unitIndex = unitIndex + 1;
+  	}
+
+  	$scope.showPrevious = function showPrevious(filteredList, unitIndex){
+  		$scope.unit = filteredList[unitIndex -1];
+  		$scope.unitIndex = unitIndex - 1;
+  	}
+
 
   	$scope.test = [
   	
@@ -50,19 +66,7 @@ angular.module('72TownsendApp')
   	   squarefoot: "2,006", 
   	   floor: "9", 
   	   image: "../../images/pland.png"
-  	}
+  	}];
 
-
-
-  	];
-
-  
-    
-    // this.awesomeThings = [
-    //   'HTML5 Boilerplate',
-    //   'AngularJS',
-    //   'Karma'
-    // ];
-  
-
+ 
   });
