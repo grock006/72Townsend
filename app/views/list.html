@@ -58,16 +58,11 @@
 </div>
 
 <!-- end desktop -->
- <!-- desktop -->
+ <!-- desktop unit -->
  <div class="container" ng-show="listHidden">
     <div class="row unit-wrapper" class="hidden-xs">
         <div class="col-md-1 text-center hidden-xs">
-        
-          <!--   <button class="btn btn-default balcony-button" class="balcony-button" ng-click="listHidden = !listHidden"
-            style="position: relative;top: 200px;z-index: 1000000;left: 229px;">
-                <i class="fa fa-chevron-left"></i> BACK TO LIST
-             </button>     -->
-        
+                
         </div>
         <div class="col-md-3 text-center hidden-xs">
             <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.plan}}</h1>
@@ -91,41 +86,33 @@
 
         <div class="col-md-8 hidden-xs" style="position:relative;width:700px">
             <div class="row">
-                <div class="col-md-12">
-            
-                     <button class="btn btn-default balcony-button" ng-click="listHidden = !listHidden">
-                        <i class="fa fa-chevron-left"></i> BACK TO LIST
-                     </button>   
+                    <div class="col-md-2">    
+                         <button class="btn btn-default balcony-button" ng-click="listHidden = !listHidden">
+                            <i class="fa fa-chevron-left"></i> BACK TO LIST
+                         </button>   
+                    </div>
 
-                     <button class="btn btn-default balcony-button" class="balcony-button" 
-                     ng-click="showPrevious(filteredList, unitIndex)"
-                     ng-if="unitIndex > 0">
-                        <i class="fa fa-chevron-left"></i> PREVIOUS 
-                     </button>            
-            
-                      <button class="btn btn-default balcony-button" ng-click="showNext(filteredList, unitIndex)"
-                        ng-if="filteredList.length > unitIndex + 1"> NEXT
-                        <i class="fa fa-chevron-right"></i>
-                      </button> 
+                    <div class="col-md-4"></div>     
+
+                    <div class="col-md-6">
+                         <button class="btn btn-default balcony-button" class="balcony-button" 
+                         ng-click="showPrevious(filteredList, unitIndex)"
+                         ng-disabled="unitIndex === 0">
+                            <i class="fa fa-chevron-left"></i> PREVIOUS 
+                         </button>            
+                
+                          <button class="btn btn-default balcony-button" ng-click="showNext(filteredList, unitIndex)"
+                            ng-disabled="filteredList.length === unitIndex + 1"> NEXT
+                            <i class="fa fa-chevron-right"></i>
+                          </button> 
+                     </div> 
 
                 </div>
             </div>
 
             <img ng-src="{{unit.image}}">
 
-            <!-- <button class="btn btn-default balcony-button" class="balcony-button" ng-click="showPrevious(filteredList, unitIndex)"
-            ng-if="unitIndex > 0"
-            style="position:absolute;top:16%;right:0%;">
-                <i class="fa fa-chevron-left"></i> PREVIOUS 
-             </button>            
-            <button class="btn btn-default balcony-button" class="balcony-button" ng-click="showNext(filteredList, unitIndex)"
-            ng-if="filteredList.length > unitIndex + 1"
-            style="position:absolute;top:16%;right:-15%"> NEXT
-                <i class="fa fa-chevron-right"></i>
-            </button>
-         -->
-
         </div>
     </div>
 </div>
-    <!-- desktop -->
+<!-- end desktop unit -->
