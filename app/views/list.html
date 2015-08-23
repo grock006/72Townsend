@@ -17,8 +17,8 @@
                         <select ng-model="sort" class="form-control">
                               <option value="floor">Sort By: Floor</option>
                               <option value="bedrooms" >Sort By: Bedrooms</option>
-                              <option value="bathrooms">Sort By: Bathrooms</option>
-                              <option value="squarefoot">Sort By: Square Feet</option>
+                              <option value="baths">Sort By: Bathrooms</option>
+                              <option value="interiorSqFt">Sort By: Square Feet</option>
                           </select>
                      
                      </div>
@@ -33,15 +33,15 @@
             <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | orderBy:sort ))">
               <div class="row list-group-item">
                     <div class="col-md-3 hidden-xs">
-                          <img ng-src="{{item.image}}" style="width:85%" class="img-thumbnail"> 
+                          <img ng-src="{{item.planImage}}" style="width:85%" class="img-thumbnail"> 
                     </div>
                 
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                        <h4>Unit {{item.unit}} / Plan {{item.plan}}</h4>         
-                        <p>{{item.squarefoot}} sq. ft<br>
+                        <h4>Unit {{item.unit}} / Plan {{item.planId}}</h4>         
+                        <p>{{item.interiorSqFt}} sq. ft<br>
                             Bedrooms: {{item.bedrooms}}</br>
-                            Full Baths: {{item.bathrooms}}</br>
-                            Floor {{item.floor}}</p>
+                            Full Baths: {{item.baths}}</br>
+                            Floor: {{item.floor}}</p>
                     </div>
                 
                     <div class="col-md-3 col-sm-5 col-xs-5">
@@ -65,13 +65,13 @@
                 
         </div>
         <div class="col-md-3 text-center hidden-xs">
-            <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.plan}}</h1>
+            <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
             <div class="yellow-border">
-                <h2>{{unit.squarefoot}} SQ. FT</h2>
+                <h2>{{unit.interiorSqFt}} SQ. FT</h2>
                 <hr>
                 <h2>BEDROOMS<br> {{unit.bedrooms}}</h2>
                 <hr>
-                <h2>FULL BATHS<br> {{unit.bathrooms}}</h2>
+                <h2>FULL BATHS<br> {{unit.baths}}</h2>
                 <hr>
                 <h2>GOURMET KITCHEN WITH PENINSULA</h2>
                 <hr>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <img ng-src="{{unit.image}}">
+            <img ng-src="{{unit.planImage}}">
 
         </div>
     </div>
