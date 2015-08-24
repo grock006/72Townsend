@@ -7,10 +7,25 @@
                     <br>
                     <br>
                     <br>
-                    <button class="btn btn-default floor-top-button hidden-xs" >
+                   <!--  <button class="btn btn-default floor-top-button hidden-xs" >
                     Floor 5 
                     <i class="fa fa-angle-down"></i>
-                    </button>
+                    </button> -->
+                     <div class="btn-group" dropdown>
+                      <button type="button" class="btn floor-top-button hidden-xs" dropdown-toggle>
+                        FLOOR  <i class="fa fa-chevron-down"></i>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                        <li><a ui-sref="floor">FLOOR 3</a></li>
+                        <li><a ui-sref="floor">FLOOR 4</a></li>
+                        <li><a ui-sref="floor">FLOOR 5</a></li>
+                        <li><a ui-sref="floor">FLOOR 6</a></li>
+                        <li><a ui-sref="floor">FLOOR 7</a></li>
+                        <li><a ui-sref="floor">FLOOR 8</a></li>
+                        <li><a ui-sref="floor">FLOOR 9</a></li>
+                      </ul>
+                    </div>
+
                 </div>
                 <div class="col-md-5"></div>
             </div>
@@ -18,11 +33,18 @@
             <div class="row">
                 <div class="col-md-12" style="position:relative">
                     <img src="images/floor_north.png" class="floor-main hidden-xs">
-                    <div class="image-overlay" style="top:14%;left:21%" ng-click="displayUnit(508)">
-                        <!-- ng-click function that takes you to apartment by unit number -->
-                        <!-- do a controller $filter for the unit number -->
-                    </div>
-                     <div class="image-overlay" style="top:13%;left:36%" ng-click="displayUnit(509)"></div>
+                         <div class="image-overlay" style="top:63%;left:78%" ng-click="displayUnit(501)"></div>
+                         <div class="image-overlay" style="top:65%;left:65%" ng-click="displayUnit(502)"></div>
+                         <div class="image-overlay" style="top:59%;left:55%" ng-click="displayUnit(503)"></div>
+                         <div class="image-overlay" style="top:59%;left:44%" ng-click="displayUnit(504)"></div>
+                         <div class="image-overlay" style="top:61%;left:33%" ng-click="displayUnit(505)"></div>
+                         <div class="image-overlay" style="top:61%;left:21%" ng-click="displayUnit(506)"></div>
+                         <div class="image-overlay" style="top:33%;left:21%" ng-click="displayUnit(507)"></div>
+                         <div class="image-overlay" style="top:14%;left:21%" ng-click="displayUnit(508)"></div>
+                         <div class="image-overlay" style="top:13%;left:36%" ng-click="displayUnit(509)"></div>
+                         <div class="image-overlay" style="top:14%;left:51%" ng-click="displayUnit(510)"></div>
+                         <div class="image-overlay" style="top:15%;left:66%" ng-click="displayUnit(511)"></div>
+                         <div class="image-overlay" style="top:16%;left:78%" ng-click="displayUnit(512)"></div>
                 </div>
             </div>
               
@@ -32,10 +54,10 @@
 <!-- desktop unit -->
  <div class="container" ng-show="floorHidden">
     <div class="row unit-wrapper" class="hidden-xs">
-        <div class="col-md-1 text-center hidden-xs">
+        <!-- <div class="col-md-1 text-center hidden-xs">
                 
-        </div>
-        <div class="col-md-3 text-center hidden-xs">
+        </div> -->
+        <div class="col-md-4 text-center hidden-xs">
             <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
             <div class="yellow-border">
                 <h2>{{unit.interiorSqFt}} SQ. FT</h2>
@@ -55,33 +77,40 @@
             <br>
         </div>
 
-        <div class="col-md-8 hidden-xs" style="position:relative;width:700px">
-            <div class="row">
+         <div class="col-md-8 hidden-xs" style="position:relative;">
+            <div class="row" style="padding:0px">
                     <div class="col-md-2">    
                          <button class="btn btn-default balcony-button" ng-click="floorHidden = !floorHidden">
-                            <i class="fa fa-chevron-left"></i> BACK TO LIST
+                            <i class="fa fa-chevron-left"></i> BACK TO FLOOR
                          </button>   
                     </div>
 
-                    <div class="col-md-4"></div>     
+                    <div class="col-md-5"></div>     
 
-                    <div class="col-md-6">
-                        <!--  <button class="btn btn-default balcony-button" class="balcony-button" 
-                         ng-click="showPrevious(filteredList, unitIndex)"
-                         ng-disabled="unitIndex === 0">
+                    <div class="col-md-5">
+                         <button class="btn btn-default balcony-button" class="balcony-button" 
+                         ng-click="displayUnit(unit.unit - 1)"
+                         ng-disabled="(unit.unit - 1) === 500">
                             <i class="fa fa-chevron-left"></i> PREVIOUS 
                          </button>            
                 
-                          <button class="btn btn-default balcony-button" ng-click="showNext(filteredList, unitIndex)"
-                            ng-disabled="filteredList.length === unitIndex + 1"> NEXT
+                          <button class="btn btn-default balcony-button" ng-click="displayUnit(unit.unit + 1)"
+                          ng-disabled="(unit.unit + 1) === 513"> 
+                            NEXT 
                             <i class="fa fa-chevron-right"></i>
-                          </button>  -->
+                          </button> 
                      </div> 
 
                 </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-11">
+                        <img ng-src="{{unit.planImage}}" style="width:100%">
+                  </div>
+               <!--    <div class="col-md-1"></div> -->
+                </div>
             </div>
-
-            <img ng-src="{{unit.planImage}}" style="width:50%">
 
         </div>
     </div>

@@ -27,49 +27,6 @@ angular.module('72TownsendApp')
   	}
 
 
-  	// $scope.test = [
-  	
-  	// {  id: "1", 
-  	//    unit: "511", 
-  	//    plan: "L",
-  	//    bathrooms: "2", 
-  	//    bedrooms: "2", 
-  	//    squarefoot: "1,106", 
-  	//    floor: "5", 
-  	//    image: "../../images/planL.png"
-  	// },
-
-  	// {  id: "2", 
-  	//    unit: "412",
-  	//    plan: "B", 
-  	//    bathrooms: "1", 
-  	//    bedrooms: "1", 
-  	//    squarefoot: "906", 
-  	//    floor: "4", 
-  	//    image: "../../images/planB.png"
-  	// },
-
-  	// {  id: "3", 
-  	//    unit: "312",
-  	//    plan: "D", 
-  	//    bathrooms: "1", 
-  	//    bedrooms: "1", 
-  	//    squarefoot: "2,006", 
-  	//    floor: "4", 
-  	//    image: "../../images/planD.png"
-  	// },
-
-  	// {  id: "4", 
-  	//    unit: "912",
-  	//    plan: "D", 
-  	//    bathrooms: "2", 
-  	//    bedrooms: "3", 
-  	//    squarefoot: "2,006", 
-  	//    floor: "9", 
-  	//    image: "../../images/planD.png"
-  	// }];
-
-
   $scope.test = 
   [{
     "plan": "A3",
@@ -1308,7 +1265,7 @@ angular.module('72TownsendApp')
   },
   {
     "plan": "J8",
-    "planId": "J",
+    "planId": "J-8",
     "release": 6,
     "unit": 806,
     "tract": "4779-3",
@@ -1346,7 +1303,7 @@ angular.module('72TownsendApp')
   },
   {
     "plan": "L8",
-    "planId": "L",
+    "planId": "L-8",
     "release": 6,
     "unit": 808,
     "tract": "4779-3",
