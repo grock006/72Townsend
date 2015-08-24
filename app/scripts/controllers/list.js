@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('72TownsendApp')
-  .controller('ListCtrl', function($rootScope, $scope) {
+  .controller('ListCtrl', function($rootScope, $scope, $filter) {
 
   	//init setting for 'sort by'
   	$scope.sort = "floor";
   	$scope.listHidden = false;
+  	$scope.floorHidden = false;
 
   	$scope.showUnit = function showUnit(filteredItems, index){  		
   		$scope.unitIndex = index;
@@ -1478,5 +1479,12 @@ angular.module('72TownsendApp')
   // }
 ]
 
- 
-  });
+$scope.displayUnit = function displayUnit(num){
+		var unit = $filter('filter')($scope.test, {unit:num})
+ 		$scope.unit = unit[0]
+ 		console.log($scope.unit[0])
+ 		$scope.floorHidden = true;
+}
+
+
+});

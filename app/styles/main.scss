@@ -217,6 +217,36 @@ hr{
     padding: 11px 20px;
 }
 
+/* Floor Styles */
+
+.floor-main {
+    width: 80%;
+    margin-left: 7%;
+    z-index: 20000000;
+} 
+
+.floor-top-button {
+     @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    color: #333!important;
+    border-top: 1px solid rgba(225,187,1,0.6);
+    border-right: 1px solid rgba(225,187,1,0.8);
+    border-bottom: 1px solid rgba(225,187,1,0.9);
+    border-left: 1px solid rgba(225,187,1,0.8);
+    font-weight: bold;
+    padding: 11px 77px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} 
+
+.image-overlay {
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  z-index: 4000000000;
+  position: absolute;
+  cursor: pointer;
+} 
+
 /* End Custom Styles*/
 
 /* Custom Mobile Styles */

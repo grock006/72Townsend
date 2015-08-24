@@ -34,6 +34,12 @@ angular
         templateUrl: 'views/list.html',
         controller: 'ListCtrl',
         controllerAs: 'list'
+      })
+      .state('floor', {
+        url: '/floor',
+        templateUrl: 'views/floor.html',
+        controller: 'ListCtrl',
+        controllerAs: 'list'
       });
      
     $urlRouterProvider.otherwise('/');
