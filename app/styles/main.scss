@@ -19,6 +19,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Global Styles */
 
+
 html {
   font-family: 'Helvetica Neue';
 }
@@ -65,6 +66,10 @@ html {
    background-color: black;
    position: relative;
    top: 126px;
+
+   .dropdown-menu {
+     width:97%;
+   }
 }
 
 .button-wrapper {
@@ -81,12 +86,8 @@ html {
       padding-bottom: 11px;
     }
 
-    .btn-group{
-        display: block;
-    }
-
+  
     button{
-       // background: linear-gradient(to bottom,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
       @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
       color: #333;
       border-top: 1px solid rgba(225,187,1,0.6);
@@ -105,9 +106,9 @@ html {
       .btn:active{
       outline: 0;
        @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
-      box-shadow: none;
     }
 }
+
 
 .dropdown-menu {
    @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
@@ -129,7 +130,7 @@ html {
     }
 
     li a:hover, li a:visited, li a:active{
-         @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+         @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 0%);
     }
 }
 
@@ -156,6 +157,7 @@ html {
       margin-bottom: 20px;
       letter-spacing: 2px;
       text-align: center;
+      height: 43px;
     }
 
 }
@@ -178,12 +180,22 @@ html {
       letter-spacing: 2px;  
     }
 
+    .btn:active{
+      outline: 0;
+       @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    }
+
 }
 
 /* Unit Styles */
 
 .unit-wrapper{
     margin-top:13%;
+
+    .btn:active{
+      outline: 0;
+       @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    }
 }
 
 .yellow-border{
@@ -239,20 +251,92 @@ hr{
 } 
 
 .image-overlay {
-  width: 70px;
-  height: 70px;
-  background-color: transparent;
-  z-index: 4000000000;
-  position: absolute;
-  cursor: pointer;
-} 
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    z-index: 4000000000;
+    position: absolute;
+    cursor: pointer;
+  } 
 
-/* End Custom Styles*/
+/* End Desktop Custom Styles*/
+
+/* Custom Tablet Styles */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .responsive-background{
+        background-color:black;
+    }
+     /* Navbar Styles */
+    .navbar-inverse {
+      padding: 0px;
+      min-height: 95px;
+      border-bottom: 3px solid #f8d63e;
+    }
+
+    .main-logo {
+      width: 70%;
+    }
+
+    /* Landing Styles*/
+
+    .landing-wrapper {
+        margin-top: 74px;
+    }
+
+    .carousel-indicators {
+      bottom: -8px;
+    }
+
+    .mobile-button-wrapper {
+
+        background-color: black;
+        margin-top: 10%;
+
+        h3{
+          color: white;
+          text-transform: uppercase;
+          font-size: 13px;
+          letter-spacing: 2px;
+          padding-bottom: 0px;
+          margin-top: 0px;
+          text-align: center;
+        }
+
+
+        button{
+          @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+          color: #333;
+          border-top: 1px solid rgba(225,187,1,0.6);
+          border-right: 1px solid rgba(225,187,1,0.8);
+          border-bottom: 1px solid rgba(225,187,1,0.9);
+          border-left: 1px solid rgba(225,187,1,0.8);
+          font-weight: bold;
+          font-size:13px;
+          padding: 11px 10px;
+          margin-top: 5px;
+          display: block;
+          width: 100%;
+          letter-spacing: 2px;
+          margin-top: 10px;
+        }
+
+          .btn:active{
+          outline: 0;
+           @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+          box-shadow: none;
+        }
+
+    }
+
+
+}
 
 /* Custom Mobile Styles */
 
 /* Extra Small Devices, Phones */
-@media (max-width : 568px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
 
   /* Global Styles */
 
@@ -284,12 +368,12 @@ hr{
     .mobile-button-wrapper {
 
         background-color: black;
-        padding: 0px 56px;
+        margin-top: 5%;
 
         h3{
           color: white;
           text-transform: uppercase;
-          font-size: 16px;
+          font-size: 15px;
           letter-spacing: 2px;
           padding-bottom: 0px;
           margin-top: 0px;
@@ -368,102 +452,33 @@ hr{
        width: 50%;     
      }
 
+     /* Floor Styles */
+
+     .floor-main-floor {
+       width: 100%;
+       margin-left: -24px;
+    }
+
+    .floor-button-floor {
+        // padding: 10px 67px;
+        background: linear-gradient(to bottom,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+        color: #333!important;
+        border-top: 1px solid rgba(225,187,1,0.6);
+        border-right: 1px solid rgba(225,187,1,0.8);
+        border-bottom: 1px solid rgba(225,187,1,0.9);
+        border-left: 1px solid rgba(225,187,1,0.8);
+        font-weight: bold;
+        display: block;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .floor-button-wrapper{
+      margin: 20px 0px;
+    }
+
+
 }
 
 /* End Custom Mobile Styles*/
-
-
-
-
-
-
-
-
-
-
-// .browsehappy {
-//   margin: 0.2em 0;
-//   background: #ccc;
-//   color: #000;
-//   padding: 0.2em 0;
-// }
-
-// body {
-//   padding: 0;
-// }
-
-// /* Everything but the jumbotron gets side spacing for mobile first views */
-// .header,
-// .marketing,
-// .footer {
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-
-// /* Custom page header */
-// .header {
-//   border-bottom: 1px solid #e5e5e5;
-//   margin-bottom: 10px;
-
-//   /* Make the masthead heading the same height as the navigation */
-//   h3 {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     line-height: 40px;
-//     padding-bottom: 19px;
-//   }
-// }
-
-// /* Custom page footer */
-// .footer {
-//   padding-top: 19px;
-//   color: #777;
-//   border-top: 1px solid #e5e5e5;
-// }
-
-// // .container-narrow > hr {
-// //   margin: 30px 0;
-// // }
-
-// Main marketing message and sign up button
-// .jumbotron {
-//   text-align: center;
-//   border-bottom: 1px solid #e5e5e5;
-
-//   .btn {
-//     font-size: 21px;
-//     padding: 14px 24px;
-//   }
-// }
-
-// /* Supporting marketing content */
-// .marketing {
-//   margin: 40px 0;
-
-//   p + h4 {
-//     margin-top: 28px;
-//   }
-// }
-
-// /* Responsive: Portrait tablets and up */
-// @media screen and (min-width: 768px) {
-//   // .container {
-//   //   max-width: 730px;
-//   // }
-
-//   /* Remove the padding we set earlier */
-//   .header,
-//   .marketing,
-//   .footer {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-//   /* Space out the masthead */
-//   .header {
-//     margin-bottom: 30px;
-//   }
-//   /* Remove the bottom border on the jumbotron for visual effect */
-//   .jumbotron {
-//     border-bottom: 0;
-//   }
-// }

@@ -13,7 +13,9 @@
                     </button> -->
                      <div class="btn-group" dropdown>
                       <button type="button" class="btn floor-top-button hidden-xs" dropdown-toggle>
-                        FLOOR  <i class="fa fa-chevron-down"></i>
+                        FLOOR 5 
+                      <!--   <i class="fa fa-chevron-down"></i> -->
+                            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                       </button>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
                         <li><a ui-sref="floor">FLOOR 3</a></li>
@@ -51,6 +53,44 @@
     </div>
 </div>
 
+<!-- mobile floor -->
+<div class="container hidden-sm hidden-md hidden-lg" style="background-color:white;margin-top:95px">
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 floor-button-wrapper"> 
+                    <div dropdown>
+                      <button type="button" class="btn floor-button-floor hidden-lg hidden-sm hidden-md" dropdown-toggle>
+                        FLOOR 5
+                      <!--   <i class="fa fa-chevron-down"></i> -->
+                            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                        <li><a ui-sref="floor">FLOOR 3</a></li>
+                        <li><a ui-sref="floor">FLOOR 4</a></li>
+                        <li><a ui-sref="floor">FLOOR 5</a></li>
+                        <li><a ui-sref="floor">FLOOR 6</a></li>
+                        <li><a ui-sref="floor">FLOOR 7</a></li>
+                        <li><a ui-sref="floor">FLOOR 8</a></li>
+                        <li><a ui-sref="floor">FLOOR 9</a></li>
+                      </ul>
+                    </div>          
+            <!-- <button class="btn btn-default btn-lg hidden-sm hidden-md hidden-lg floor-button-floor text-center">Floor 5 
+                <i class="fa fa-angle-down"></i>
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </button> -->
+        </div>
+        <div class="col-xs-2"></div>
+    </div>    
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="images/floor_plan_five_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white">
+        </div>
+    </div>
+
+</div>
+<!-- end mobile floor -->
+
 <!-- desktop unit -->
  <div class="container" ng-show="floorHidden">
     <div class="row unit-wrapper" class="hidden-xs">
@@ -71,7 +111,8 @@
                 <h2>SPACIOUS GREAT ROOM WITH PENINSULA</h2>
                 <hr>
                 <button class="btn btn-default balcony-button" class="balcony-button">BALCONY VIEW
-                    <i class="fa fa-camera"></i>
+                    <!-- <i class="fa fa-camera"></i> -->
+                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
                 </button>
             </div>
             <br>
@@ -81,7 +122,9 @@
             <div class="row" style="padding:0px">
                     <div class="col-md-2">    
                          <button class="btn btn-default balcony-button" ng-click="floorHidden = !floorHidden">
-                            <i class="fa fa-chevron-left"></i> BACK TO FLOOR
+                            <!-- <i class="fa fa-chevron-left"></i>  -->
+                            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            BACK TO FLOOR
                          </button>   
                     </div>
 
@@ -91,13 +134,16 @@
                          <button class="btn btn-default balcony-button" class="balcony-button" 
                          ng-click="displayUnit(unit.unit - 1)"
                          ng-disabled="(unit.unit - 1) === 500">
-                            <i class="fa fa-chevron-left"></i> PREVIOUS 
+                            <!-- <i class="fa fa-chevron-left"></i>  -->
+                            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                            PREVIOUS 
                          </button>            
                 
                           <button class="btn btn-default balcony-button" ng-click="displayUnit(unit.unit + 1)"
                           ng-disabled="(unit.unit + 1) === 513"> 
                             NEXT 
-                            <i class="fa fa-chevron-right"></i>
+                            <!-- <i class="fa fa-chevron-right"></i> -->
+                            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                           </button> 
                      </div> 
 
