@@ -1439,7 +1439,6 @@ angular.module('72TownsendApp')
 $scope.displayUnit = function displayUnit(num){
 		var unit = $filter('filter')($scope.test, {unit:num})
  		$scope.unit = unit[0]
- 		console.log($scope.unit[0])
  		$scope.floorHidden = true;
 }
 

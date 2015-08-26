@@ -36,6 +36,10 @@ html {
     max-width: none;
 }
 
+.dropdown-menu {
+  z-index:6000000000000;
+}
+
 /* Navbar Styles */
 
 .navbar-inverse {
@@ -231,6 +235,16 @@ hr{
 
 /* Floor Styles */
 
+.floor-unit-wrapper{
+    margin-top:150px;
+
+    .btn:active{
+      outline: 0;
+       @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    }
+}
+
+
 .floor-main {
     width: 80%;
     margin-left: 7%;
@@ -254,7 +268,7 @@ hr{
     width: 70px;
     height: 70px;
     background-color: transparent;
-    z-index: 4000000000;
+    z-index: 40000;
     position: absolute;
     cursor: pointer;
   } 
@@ -387,6 +401,7 @@ hr{
      .floor-main-floor {
        width: 100%;
        margin-left: -24px;
+       z-index: 20000000;
     }
 
     .floor-button-floor {
@@ -544,6 +559,20 @@ hr{
      }
 
      /* Floor Styles */
+
+     .mobile-floor-unit-wrapper{
+      margin-top: 92px;
+      margin-bottom: 10%;
+    }
+
+     .image-overlay-mobile {
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        z-index: 40000;
+        position: absolute;
+        cursor: pointer;
+    } 
 
      .floor-main-floor {
        width: 100%;
