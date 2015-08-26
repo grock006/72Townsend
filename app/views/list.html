@@ -1,10 +1,10 @@
 <!-- desktop -->
 <div class="container" ng-hide="listHidden">
         <div class="row list-wrapper"> 
-            <div class="col-md-4">
+            <div class="col-sm-4 col-md-4">
                  
                  <div class="row">
-                    <div class="col-md-10 select-group">
+                    <div class="col-sm-10 col-md-10 select-group">
                      
                          <select ng-model="bedrooms" class="form-control">
                               <option value="">All Bedrooms</option>  
@@ -22,20 +22,20 @@
                      
                      </div>
                     
-                   <div class="col-md-2"></div>
+                   <div class="col-sm-2 col-md-2"></div>
                   </div>
             
             </div>
 
-            <div class="col-md-8  list-group">
+            <div class="col-sm-8 col-md-8  list-group">
             
             <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | orderBy:sort ))">
               <div class="row list-group-item">
-                    <div class="col-md-3 hidden-xs">
+                    <div class="col-sm-3 col-md-3 hidden-xs">
                           <img ng-src="{{item.planImage}}" style="height:150px" class="img-thumbnail"> 
                     </div>
                 
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-md-5 col-sm-5 col-xs-6">
                         <h4>Unit {{item.unit}} / Plan {{item.planId}}</h4>         
                         <p>{{item.interiorSqFt}} sq. ft<br>
                             Bedrooms: {{item.bedrooms}}<br>
@@ -43,12 +43,12 @@
                             Floor: {{item.floor}}</p>
                     </div>
                 
-                    <div class="col-md-3 col-sm-5 col-xs-5">
+                    <div class="col-md-4 col-sm-4 col-xs-5">
                          <button class="btn btn-default detail-button" ng-click="showUnit(filteredItems, $index)">VIEW DETAILS    
                           <!--   <i class="fa fa-chevron-right"></i></button> -->
                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                     </div>
-                    <div class="col-sm-1 col-xs-1"></div>
+                    <div class="col-md-1 col-sm-1 col-xs-1"></div>
                 </div>
    
             </div>
@@ -61,7 +61,7 @@
  <!-- desktop unit -->
  <div class="container hidden-xs" ng-show="listHidden">
     <div class="row unit-wrapper hidden-xs">
-        <div class="col-md-4 text-center hidden-xs">
+        <div class="col-sm-4 col-md-4 text-center hidden-xs">
             <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
             <div class="yellow-border">
                 <h2>{{unit.interiorSqFt}} SQ. FT</h2>
@@ -82,9 +82,9 @@
             <br>
         </div>
 
-        <div class="col-md-8 hidden-xs" style="position:relative">
+        <div class="col-sm-8 col-md-8 hidden-xs" style="position:relative">
             <div class="row" style="padding:0px">
-                    <div class="col-md-2">    
+                    <div class="col-sm-2 col-md-2">    
                          <button class="btn btn-default balcony-button" ng-click="listHidden = !listHidden">
                          <!--    <i class="fa fa-chevron-left"></i>  -->
                             <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
@@ -92,9 +92,9 @@
                          </button>   
                     </div>
 
-                    <div class="col-md-5"></div>     
+                    <div class="col-sm-3 col-md-5"></div>     
 
-                    <div class="col-md-5">
+                    <div class="col-sm-7 col-md-5">
                          <button class="btn btn-default balcony-button" class="balcony-button" 
                          ng-click="showPrevious(filteredList, unitIndex)"
                          ng-disabled="unitIndex === 0">
@@ -113,8 +113,8 @@
                 </div>
                 <br>
                 <div class="row hidden-xs">
-                  <div class="col-md-1"></div>
-                  <div class="col-md-11">
+                  <div class="col-sm-1 col-md-1"></div>
+                  <div class="col-sm-11 col-md-11">
                         <img ng-src="{{unit.planImage}}" style="width:100%">
                   </div>
                 </div>
@@ -127,14 +127,14 @@
 <!-- mobile -->
 <div class="container hidden-sm hidden-md hidden-lg mobile-unit-wrapper" ng-show="listHidden">
     <div class="row mobile-unit-nav">
-      <div class="col-xs-4">
+      <div class="col-xs-4 col-sm-4">
         <a href="#" ng-click="showPrevious(filteredList, unitIndex)" ng-disabled="unitIndex === 0"> 
          <!--  <i class="fa fa-angle-left"></i>  -->
               <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
         Previous</a>
       </div>
-      <div class="col-xs-5">Unit {{unit.unit}}</div>
-      <div class="col-xs-3">
+      <div class="col-xs-5 col-sm-6">Unit {{unit.unit}}</div>
+      <div class="col-xs-3 col-sm-4">
         <a href="#" ng-click="showNext(filteredList, unitIndex)" ng-disabled="filteredList.length === unitIndex + 1">
           Next 
      <!--      <i class="fa fa-angle-right"></i> -->
@@ -144,7 +144,7 @@
   
     <div class="row">
         <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg">
-            <img ng-src="{{unit.planImage}}" style="width:300px;margin-top:30px">
+            <img ng-src="{{unit.planImage}}" class="mobile-unit-image">
         </div>
     </div>
       
