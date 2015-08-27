@@ -4,30 +4,56 @@
             <div class="col-sm-4 col-md-4">
                  
                  <div class="row">
-                    <div class="col-sm-10 col-md-10 select-group">
-                     
-                         <select ng-model="bedrooms" class="form-control">
+                    <div class="col-xs-12 col-sm-11 col-md-11 select-group">
+
+                          <div dropdown>
+                            <button type="button" class="btn" dropdown-toggle>
+                              {{bedrooms}}{{bedroomText}} BEDROOMS
+                              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                              <li><a ng-click="selectListBedroom()">ALL BEDROOMS</a></li>
+                              <li><a ng-click="selectListBedroom(1)">1 BEDROOM</a></li>
+                              <li><a ng-click="selectListBedroom(2)">2 BEDROOMS</a></li>
+                              <li><a ng-click="selectListBedroom(3)">3 BEDROOMS</a></li>
+                            </ul>
+                          </div>
+
+                          <div dropdown>
+                            <button type="button" class="btn" dropdown-toggle>
+                                SORT BY: {{sortText | uppercase}}
+                              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                              <li><a ng-click="selectSort('floor')">FLOOR</a></li>
+                              <li><a ng-click="selectSort('bedrooms')">BEDROOMS</a></li>
+                              <li><a ng-click="selectSort('baths')">BATHS</a></li>
+                              <li><a ng-click="selectSort('interiorSqFt')">SQUARE FOOTAGE</a></li>
+                            </ul>
+                          </div>
+                           
+                         <!-- <select ng-model="bedrooms">
                               <option value="">All Bedrooms</option>  
                               <option value="1">1 Bedroom</option>
                               <option value="2">2 Bedrooms</option>
                               <option value="3">3 Bedrooms</option>
                           </select>
 
-                        <select ng-model="sort" class="form-control">
+                        <select ng-model="sort">
                               <option value="floor">Sort By: Floor</option>
                               <option value="bedrooms" >Sort By: Bedrooms</option>
-                              <option value="baths">Sort By: Bathrooms</option>
-                              <option value="interiorSqFt">Sort By: Square Feet</option>
-                          </select>
+                              <option value="baths">Sort By: Baths</option>
+                              <option value="interiorSqFt">Sort By: Square Footage</option>
+                          </select> -->
                      
                      </div>
                     
-                   <div class="col-sm-2 col-md-2"></div>
+                   <div class="col-sm-1 col-md-1"></div>
                   </div>
             
             </div>
 
-            <div class="col-sm-8 col-md-8  list-group">
+            <div class="col-xs-12 col-sm-8 col-md-8  list-group">
             
             <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | orderBy:sort ))">
               <div class="row list-group-item">
@@ -37,9 +63,9 @@
                 
                     <div class="col-md-5 col-sm-5 col-xs-6">
                         <h4>Unit {{item.unit}} / Plan {{item.planId}}</h4>         
-                        <p>{{item.interiorSqFt}} sq. ft<br>
+                         <p>Square Footage: {{item.interiorSqFt}}<br>
                             Bedrooms: {{item.bedrooms}}<br>
-                            Full Baths: {{item.baths}}<br>
+                            Baths: {{item.baths}}<br>
                             Floor: {{item.floor}}</p>
                     </div>
                 
@@ -64,11 +90,11 @@
         <div class="col-sm-4 col-md-4 text-center hidden-xs">
             <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
             <div class="yellow-border">
-                <h2>{{unit.interiorSqFt}} SQ. FT</h2>
+                <h2>SQUARE FOOTAGE<br> {{unit.interiorSqFt}}</h2>
                 <hr>
                 <h2>BEDROOMS<br> {{unit.bedrooms}}</h2>
                 <hr>
-                <h2>FULL BATHS<br> {{unit.baths}}</h2>
+                <h2>BATHS<br> {{unit.baths}}</h2>
                 <hr>
                 <h2>GOURMET KITCHEN WITH PENINSULA</h2>
                 <hr>
@@ -123,7 +149,7 @@
 </div>
 <!-- end desktop unit -->
 
-<!-- mobile -->
+<!-- mobile  unit -->
 <div class="container hidden-sm hidden-md hidden-lg mobile-unit-wrapper" ng-show="listHidden">
     <div class="row mobile-unit-nav">
       <div class="col-xs-4 col-sm-4">
@@ -143,6 +169,15 @@
   
     <div class="row">
         <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg">
+            <div class="row">
+                  <div class="col-sm-4 col-xs-4"></div>
+                  <div class="col-sm-6 col-xs-6"></div>
+                  <div class="col-sm-2 col-xs-2">
+                      <a href="#" ng-click="listHidden = !listHidden">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </a>
+                  </div>
+                </div>
             <img ng-src="{{unit.planImage}}" class="mobile-unit-image">
         </div>
     </div>
@@ -151,11 +186,11 @@
         <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg text-center">
             <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
             <div class="yellow-border">
-                <h2>{{unit.interiorSqFt}} SQ. FT</h2>
+                <h2>SQUARE FOOTAGE<br> {{unit.interiorSqFt}}</h2>
                 <hr>
                 <h2>BEDROOMS<br> {{unit.bedrooms}}</h2>
                 <hr>
-                <h2>FULL BATHS<br> {{unit.baths}}</h2>
+                <h2>BATHS<br> {{unit.baths}}</h2>
                 <hr>
                 <h2>GOURMET KITCHEN WITH PENINSULA</h2>
                 <hr>
@@ -169,4 +204,4 @@
         </div>
     </div>
 </div>
-<!-- end -->
+<!-- end mobile-->
