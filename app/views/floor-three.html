@@ -146,7 +146,7 @@
                          </button>            
                 
                           <button class="btn btn-default balcony-button" ng-click="displayUnit(unit.unit + 1)"
-                          ng-disabled="(unit.unit + 1) === 613"> 
+                          ng-disabled="(unit.unit + 1) === 313"> 
                             NEXT 
                             <!-- <i class="fa fa-chevron-right"></i> -->
                             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -180,7 +180,7 @@
       </div>
       <div class="col-xs-5 col-sm-6">Unit {{unit.unit}}</div>
       <div class="col-xs-3 col-sm-4">
-        <a href="#" ng-click="displayUnit(unit.unit + 1)" ng-disabled="(unit.unit + 1) === 613">
+        <a href="#" ng-click="displayUnit(unit.unit + 1)" ng-disabled="(unit.unit + 1) === 313">
           Next 
      <!--      <i class="fa fa-angle-right"></i> -->
            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
@@ -189,6 +189,15 @@
   
     <div class="row">
         <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg">
+              <div class="row">
+                  <div class="col-sm-4 col-xs-4"></div>
+                  <div class="col-sm-6 col-xs-6"></div>
+                  <div class="col-sm-2 col-xs-2">
+                      <a href="#" ng-click="floorHidden = !floorHidden">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </a>
+                  </div>
+                </div>
             <img ng-src="{{unit.planImage}}" class="mobile-unit-image">
         </div>
     </div>

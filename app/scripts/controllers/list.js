@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('72TownsendApp')
-  .controller('ListCtrl', function($rootScope, $scope, $filter) {
+  .controller('ListCtrl', function($rootScope, $scope, $filter, $modal) {
 
   	//init setting for 'sort by'
   	$scope.sort = "floor";
   	$scope.listHidden = false;
   	$scope.floorHidden = false;
+
+    $scope.slides = [];
 
   	$scope.showUnit = function showUnit(filteredItems, index){  		
   		$scope.unitIndex = index;
@@ -26,6 +28,32 @@ angular.module('72TownsendApp')
   		$scope.unitIndex = unitIndex - 1;
   	}
 
+    $scope.slides = [ {image: "../../images/balcony/903Balcony1.png"},
+                    {image: "../../images/balcony/903Balcony2.png"},
+                    {image: "../../images/balcony/903Balcony3.png"}]    
+
+
+  $scope.openBalcony = function openBalcony(unit) {
+
+    var modalInstance = $modal.open({
+      animation: true,
+      templateUrl: '../views/balcony-modal.html',
+      controller: 'ListCtrl',
+      size: 'sm',
+      resolve: {
+        function() {
+          return $scope.slides;
+        }
+      }
+    });
+
+    console.log(unit)
+    console.log(unit.balconyImages)
+    $scope.slides = unit.balconyImages;
+    console.log($scope.slides)
+
+  };
+     
 
   $scope.test = 
   [{
@@ -1394,7 +1422,10 @@ angular.module('72TownsendApp')
     "bedrooms": 3,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "../../images/plans/planT.png"
+    "planImage": "../../images/plans/planT.png",
+    "balconyImages": [{image: "../../images/balcony/903Balcony3.png"}, 
+                      {image: "../../images/balcony/903Balcony2.png"}, 
+                      {image: "../../images/balcony/903Balcony1.png"}]
   },
   {
     "plan": "U ",

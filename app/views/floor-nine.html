@@ -1,3 +1,4 @@
+<!-- desktop floor -->
 <div class="row hidden-xs" style="background-color:white;margin-top:100px" ng-hide="floorHidden">
     <div class="col-sm-12 col-md-12 col-lg-12 hidden-xs" style="position:relative">
 
@@ -9,7 +10,7 @@
                     <br>
                      <div class="btn-group" dropdown>
                       <button type="button" class="btn floor-top-button hidden-xs" dropdown-toggle>
-                        FLOOR 5 
+                        FLOOR 9
                       <!--   <i class="fa fa-chevron-down"></i> -->
                             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                       </button>
@@ -30,33 +31,26 @@
 
             <div class="row">
                 <div class="col-sm-12 col-md-12" style="position:relative">
-                    <img src="images/floor_north.png" class="floor-main hidden-xs">
-                         <div class="image-overlay" style="top:63%;left:78%" ng-click="displayUnit(501)"></div>
-                         <div class="image-overlay" style="top:65%;left:65%" ng-click="displayUnit(502)"></div>
-                         <div class="image-overlay" style="top:59%;left:55%" ng-click="displayUnit(503)"></div>
-                         <div class="image-overlay" style="top:59%;left:44%" ng-click="displayUnit(504)"></div>
-                         <div class="image-overlay" style="top:61%;left:33%" ng-click="displayUnit(505)"></div>
-                         <div class="image-overlay" style="top:61%;left:21%" ng-click="displayUnit(506)"></div>
-                         <div class="image-overlay" style="top:33%;left:21%" ng-click="displayUnit(507)"></div>
-                         <div class="image-overlay" style="top:14%;left:21%" ng-click="displayUnit(508)"></div>
-                         <div class="image-overlay" style="top:13%;left:36%" ng-click="displayUnit(509)"></div>
-                         <div class="image-overlay" style="top:14%;left:51%" ng-click="displayUnit(510)"></div>
-                         <div class="image-overlay" style="top:15%;left:66%" ng-click="displayUnit(511)"></div>
-                         <div class="image-overlay" style="top:16%;left:78%" ng-click="displayUnit(512)"></div>
+                    <img src="images/floors/floor9_desktop.png" class="floor-main hidden-xs">
+                         <div class="image-overlay" style="top:62%;left:66%" ng-click="displayUnit(901)"></div>
+                         <div class="image-overlay" style="top:62%;left:37%" ng-click="displayUnit(902)"></div>
+                         <div class="image-overlay" style="top:19%;left:45%" ng-click="displayUnit(903)"></div>
+                         <div class="image-overlay" style="top:18%;left:66%" ng-click="displayUnit(904)"></div>
                 </div>
             </div>
               
     </div>
 </div>
+<!-- end desktop floor -->
 
 <!-- mobile floor -->
-<div class="container hidden-sm hidden-md hidden-lg" style="background-color:white;margin-top:95px">
+<div class="container hidden-sm hidden-md hidden-lg" style="background-color:white;margin-top:95px" ng-hide="floorHidden">
     <div class="row">
         <div class="col-sm-2 col-xs-2"></div>
         <div class="col-sm-8 col-xs-8 floor-button-wrapper"> 
                     <div dropdown>
                       <button type="button" class="btn floor-button-floor hidden-lg hidden-sm hidden-md" dropdown-toggle>
-                        FLOOR 5
+                        FLOOR 9
                       <!--   <i class="fa fa-chevron-down"></i> -->
                             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                       </button>
@@ -75,8 +69,12 @@
     </div>    
     
     <div class="row">
-        <div class="col-sm-12 col-xs-12">
-            <img src="images/floor_plan_five_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white">
+        <div class="col-sm-12 col-xs-12" style="position:relative">
+            <img src="images/floors/floor9_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white;margin-left:0px">
+            <div class="image-overlay-mobile" style="top:23%;left:21%" ng-click="displayUnit(904)"></div>
+            <div class="image-overlay-mobile" style="top:60%;left:62%" ng-click="displayUnit(902)"></div>
+            <div class="image-overlay-mobile" style="top:27%;left:62%" ng-click="displayUnit(901)"></div>
+            <div class="image-overlay-mobile" style="top:49%;left:24%" ng-click="displayUnit(903)"></div>
         </div>
     </div>
 
@@ -85,7 +83,7 @@
 
 <!-- desktop unit -->
  <div class="container" ng-show="floorHidden">
-    <div class="row unit-wrapper" class="hidden-xs">
+    <div class="row floor-unit-wrapper hidden-xs">
         <!-- <div class="col-md-1 text-center hidden-xs">
                 
         </div> -->
@@ -125,14 +123,14 @@
                     <div class="col-md-5">
                          <button class="btn btn-default balcony-button" class="balcony-button" 
                          ng-click="displayUnit(unit.unit - 1)"
-                         ng-disabled="(unit.unit - 1) === 500">
+                         ng-disabled="(unit.unit - 1) === 900">
                             <!-- <i class="fa fa-chevron-left"></i>  -->
                             <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                             PREVIOUS 
                          </button>            
                 
                           <button class="btn btn-default balcony-button" ng-click="displayUnit(unit.unit + 1)"
-                          ng-disabled="(unit.unit + 1) === 513"> 
+                          ng-disabled="(unit.unit + 1) === 905"> 
                             NEXT 
                             <!-- <i class="fa fa-chevron-right"></i> -->
                             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
@@ -154,3 +152,51 @@
     </div>
 </div>
 <!-- end desktop unit -->
+
+<!-- mobile unit -->
+<div class="container hidden-sm hidden-md hidden-lg mobile-floor-unit-wrapper" ng-show="floorHidden">
+    <div class="row mobile-unit-nav">
+      <div class="col-xs-4 col-sm-4">
+        <a href="#" ng-click="displayUnit(unit.unit - 1)" ng-disabled="(unit.unit - 1) === 900"> 
+         <!--  <i class="fa fa-angle-left"></i>  -->
+              <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        Previous</a>
+      </div>
+      <div class="col-xs-5 col-sm-6">Unit {{unit.unit}}</div>
+      <div class="col-xs-3 col-sm-4">
+        <a href="#" ng-click="displayUnit(unit.unit + 1)" ng-disabled="(unit.unit + 1) === 905">
+          Next 
+     <!--      <i class="fa fa-angle-right"></i> -->
+           <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg">
+            <img ng-src="{{unit.planImage}}" class="mobile-unit-image">
+        </div>
+    </div>
+      
+      <div class="row">
+        <div class="col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg text-center">
+            <h1 style="color:white;font-size:23px">Unit {{unit.unit}}<br> Plan {{unit.planId}}</h1>
+            <div class="yellow-border">
+                <h2>{{unit.interiorSqFt}} SQ. FT</h2>
+                <hr>
+                <h2>BEDROOMS<br> {{unit.bedrooms}}</h2>
+                <hr>
+                <h2>FULL BATHS<br> {{unit.baths}}</h2>
+                <hr>
+                <h2>GOURMET KITCHEN WITH PENINSULA</h2>
+                <hr>
+                <h2>SPACIOUS GREAT ROOM WITH PENINSULA</h2>
+                <hr>
+                    <button class="btn btn-default balcony-button" class="balcony-button">BALCONY VIEW  
+                    <!--   <i class="fa fa-camera"></i>  -->
+                            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end mobile unit -->

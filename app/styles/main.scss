@@ -521,7 +521,7 @@ hr{
 
     .mobile-unit-image{
       width:300px;
-      margin-top:30px;
+      margin-top:5px;
     }
 
     .mobile-unit-nav {
@@ -560,6 +560,12 @@ hr{
 
      /* Floor Styles */
 
+     span.glyphicon-remove{
+        color: white;
+        font-size: 25px;
+        padding: 10px 0px;
+     }
+
      .mobile-floor-unit-wrapper{
       margin-top: 92px;
       margin-bottom: 10%;
@@ -568,7 +574,7 @@ hr{
      .image-overlay-mobile {
         width: 60px;
         height: 60px;
-        background-color: black;
+        background-color: transparent;
         z-index: 40000;
         position: absolute;
         cursor: pointer;
