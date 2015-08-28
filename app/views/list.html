@@ -31,21 +31,7 @@
                               <li><a ng-click="selectSort('interiorSqFt')">SQUARE FOOTAGE</a></li>
                             </ul>
                           </div>
-                           
-                         <!-- <select ng-model="bedrooms">
-                              <option value="">All Bedrooms</option>  
-                              <option value="1">1 Bedroom</option>
-                              <option value="2">2 Bedrooms</option>
-                              <option value="3">3 Bedrooms</option>
-                          </select>
-
-                        <select ng-model="sort">
-                              <option value="floor">Sort By: Floor</option>
-                              <option value="bedrooms" >Sort By: Bedrooms</option>
-                              <option value="baths">Sort By: Baths</option>
-                              <option value="interiorSqFt">Sort By: Square Footage</option>
-                          </select> -->
-                     
+                                                
                      </div>
                     
                    <div class="col-sm-1 col-md-1"></div>
@@ -70,7 +56,10 @@
                     </div>
                 
                     <div class="col-md-4 col-sm-4 col-xs-5">
-                         <button class="btn btn-default detail-button" ng-click="showUnit(filteredItems, $index)">VIEW DETAILS    
+                         <button class="btn btn-default detail-button" 
+                              ng-click="newUnit(item, filteredItems, $index)">
+                              VIEW DETAILS    
+                                    <!--      ng-click="showUnit(filteredItems, $index)" -->
                           <!--   <i class="fa fa-chevron-right"></i></button> -->
                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                     </div>

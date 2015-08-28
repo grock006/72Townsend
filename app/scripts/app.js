@@ -35,6 +35,12 @@ angular
         controller: 'ListCtrl',
         controllerAs: 'list'
       })
+      .state('unit', {
+        url: '/unit',
+        templateUrl: 'views/unit.html',
+        controller: 'UnitCtrl',
+        controllerAs: 'unit'
+      })
        .state('floorthree', {
         url: '/floor/3',
         templateUrl: 'views/floor-three.html',
@@ -81,24 +87,3 @@ angular
     $urlRouterProvider.otherwise('/');
 
   }]);
-
-
-
-
-
-  // .config(function ($routeProvider) {
-  //   $routeProvider
-  //     .when('/', {
-  //       templateUrl: 'views/main.html',
-  //       controller: 'MainCtrl',
-  //       controllerAs: 'main'
-  //     })
-  //     .when('/about', {
-  //       templateUrl: 'views/about.html',
-  //       controller: 'AboutCtrl',
-  //       controllerAs: 'about'
-  //     })
-  //     .otherwise({
-  //       redirectTo: '/'
-  //     });
-  // });

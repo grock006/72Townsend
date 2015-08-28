@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('72TownsendApp')
-  .controller('ListCtrl', function($rootScope, $scope, $filter, $modal) {
+  .controller('ListCtrl', function($rootScope, $scope, $filter, $modal, $state) {
 
   	//init setting for 'sort by'
   	$scope.sort = "floor";
-    $scope.sortText = "floor"
+    $scope.sortText = "floor";
   	$scope.listHidden = false;
   	$scope.floorHidden = false;
 
@@ -20,7 +20,7 @@ angular.module('72TownsendApp')
             $scope.bedroomText = 'ALL';
         }
 
-    }
+    };
 
     $scope.selectSort = function selectSort(str){
         if(str === 'interiorSqFt'){
@@ -31,7 +31,7 @@ angular.module('72TownsendApp')
             $scope.sort = str;
             $scope.sortText = str;
         }
-    }
+    };
 
     $scope.slides = [];
 
@@ -41,43 +41,43 @@ angular.module('72TownsendApp')
   		$scope.unit = filteredItems[index];
 
   		$scope.listHidden = true;
-  	}
+  	};
 
   	$scope.showNext = function showNext(filteredList, unitIndex){
   		$scope.unit = filteredList[unitIndex + 1];
   		$scope.unitIndex = unitIndex + 1;
-  	}
+  	};
 
   	$scope.showPrevious = function showPrevious(filteredList, unitIndex){
   		$scope.unit = filteredList[unitIndex -1];
   		$scope.unitIndex = unitIndex - 1;
-  	}
+  	};
 
-    $scope.slides = [ {image: "../../images/balcony/903Balcony1.png"},
-                    {image: "../../images/balcony/903Balcony2.png"},
-                    {image: "../../images/balcony/903Balcony3.png"}]    
+    $scope.slides = [ {image: "images/balcony/903Balcony1.png"},
+                    {image: "images/balcony/903Balcony2.png"},
+                    {image: "images/balcony/903Balcony3.png"}];    
 
 
   $scope.openBalcony = function openBalcony(unit) {
 
-    var modalInstance = $modal.open({
+    $modal.open({
       animation: true,
-      templateUrl: '../views/balcony-modal.html',
+      templateUrl: 'views/balcony-modal.html',
       controller: 'ListCtrl',
-      size: 'sm',
-      resolve: {
-        function() {
-          return $scope.slides;
-        }
-      }
+      size: 'sm'
     });
 
-    console.log(unit)
-    console.log(unit.balconyImages)
     $scope.slides = unit.balconyImages;
-    console.log($scope.slides)
 
   };
+
+
+  $scope.newUnit = function newUnit(unit, filteredItems, index){
+    $rootScope.unitNumber = unit;
+    $rootScope.filteredListItems = filteredItems;
+    $rootScope.unitListIndex = index;
+    $state.go('unit')
+  }
      
 
   $scope.test = 
@@ -98,7 +98,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B3",
@@ -117,7 +117,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C3",
@@ -136,7 +136,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D3",
@@ -155,7 +155,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E3",
@@ -174,7 +174,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "F",
@@ -193,7 +193,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planF.png"
+    "planImage": "images/plans/planF.png"
   },
   {
     "plan": "G",
@@ -212,7 +212,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planG.png"
+    "planImage": "images/plans/planG.png"
   },
   {
     "plan": "H",
@@ -231,7 +231,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planH.png"
+    "planImage": "images/plans/planH.png"
   },
   {
     "plan": "J3-7",
@@ -250,7 +250,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png"
   },
   {
     "plan": "K3-8",
@@ -269,7 +269,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L3-7",
@@ -288,7 +288,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL.png"
+    "planImage": "images/plans/planL.png"
   },
   {
     "plan": "Q",
@@ -307,7 +307,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "A4-8",
@@ -326,7 +326,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B458",
@@ -345,7 +345,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C4-8",
@@ -364,7 +364,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D458",
@@ -383,7 +383,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E4-7",
@@ -402,7 +402,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "J3-7",
@@ -421,7 +421,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png"
   },
   {
     "plan": "K3-8",
@@ -440,7 +440,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L3-7",
@@ -459,7 +459,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL.png"
+    "planImage": "images/plans/planL.png"
   },
   {
     "plan": "N",
@@ -478,7 +478,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planN.png"
+    "planImage": "images/plans/planN.png"
   },
   {
     "plan": "O",
@@ -497,7 +497,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planO.png"
+    "planImage": "images/plans/planO.png"
   },
   {
     "plan": "P45",
@@ -516,7 +516,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planP.png"
+    "planImage": "images/plans/planP.png"
   },
   {
     "plan": "Q",
@@ -535,7 +535,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "A4-8",
@@ -554,7 +554,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B458",
@@ -573,7 +573,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C4-8",
@@ -592,7 +592,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D458",
@@ -611,7 +611,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E4-7",
@@ -630,7 +630,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "J3-7",
@@ -649,7 +649,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png"
   },
   {
     "plan": "K3-8",
@@ -668,7 +668,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L3-7",
@@ -687,7 +687,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL.png"
+    "planImage": "images/plans/planL.png"
   },
   {
     "plan": "N",
@@ -706,7 +706,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planN.png"
+    "planImage": "images/plans/planN.png"
   },
   {
     "plan": "O",
@@ -725,7 +725,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planO.png"
+    "planImage": "images/plans/planO.png"
   },
   {
     "plan": "P45",
@@ -744,7 +744,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planP.png"
+    "planImage": "images/plans/planP.png"
   },
   {
     "plan": "Q",
@@ -763,7 +763,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "A4-8",
@@ -782,7 +782,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B6",
@@ -801,7 +801,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C4-8",
@@ -820,7 +820,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D67",
@@ -839,7 +839,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E4-7",
@@ -858,7 +858,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "J3-7",
@@ -877,7 +877,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png"
   },
   {
     "plan": "K3-8",
@@ -896,7 +896,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L3-7",
@@ -915,7 +915,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL.png"
+    "planImage": "images/plans/planL.png"
   },
   {
     "plan": "N",
@@ -934,7 +934,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planN.png"
+    "planImage": "images/plans/planN.png"
   },
   {
     "plan": "O",
@@ -953,7 +953,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planO.png"
+    "planImage": "images/plans/planO.png"
   },
   {
     "plan": "P67",
@@ -972,7 +972,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planP.png"
+    "planImage": "images/plans/planP.png"
   },
   {
     "plan": "Q",
@@ -991,7 +991,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "A4-8",
@@ -1010,7 +1010,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B7",
@@ -1029,7 +1029,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C4-8",
@@ -1048,7 +1048,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D67",
@@ -1067,7 +1067,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E4-7",
@@ -1086,7 +1086,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "J3-7",
@@ -1105,7 +1105,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png"
   },
   {
     "plan": "K3-8",
@@ -1124,7 +1124,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L3-7",
@@ -1143,7 +1143,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL.png"
+    "planImage": "images/plans/planL.png"
   },
   {
     "plan": "N",
@@ -1162,7 +1162,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planN.png"
+    "planImage": "images/plans/planN.png"
   },
   {
     "plan": "O",
@@ -1181,7 +1181,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planO.png"
+    "planImage": "images/plans/planO.png"
   },
   {
     "plan": "P67",
@@ -1200,7 +1200,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planP.png"
+    "planImage": "images/plans/planP.png"
   },
   {
     "plan": "Q",
@@ -1219,7 +1219,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "A4-8",
@@ -1238,7 +1238,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planA.png"
+    "planImage": "images/plans/planA.png"
   },
   {
     "plan": "B458",
@@ -1257,7 +1257,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planB.png"
+    "planImage": "images/plans/planB.png"
   },
   {
     "plan": "C4-8",
@@ -1276,7 +1276,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planC.png"
+    "planImage": "images/plans/planC.png"
   },
   {
     "plan": "D458",
@@ -1295,7 +1295,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planD.png"
+    "planImage": "images/plans/planD.png"
   },
   {
     "plan": "E8",
@@ -1314,7 +1314,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "../../images/plans/planE.png"
+    "planImage": "images/plans/planE.png"
   },
   {
     "plan": "J8",
@@ -1333,7 +1333,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planJ8.png"
+    "planImage": "images/plans/planJ8.png"
   },
   {
     "plan": "K3-8",
@@ -1352,7 +1352,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planK.png"
+    "planImage": "images/plans/planK.png"
   },
   {
     "plan": "L8",
@@ -1371,7 +1371,7 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planL8.png"
+    "planImage": "images/plans/planL8.png"
   },
   {
     "plan": "Q",
@@ -1390,7 +1390,7 @@ angular.module('72TownsendApp')
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "../../images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png"
   },
   {
     "plan": "R",
@@ -1409,7 +1409,7 @@ angular.module('72TownsendApp')
     "bedrooms": 3,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "../../images/plans/planR.png"
+    "planImage": "images/plans/planR.png"
   },
   {
     "plan": "S",
@@ -1428,7 +1428,7 @@ angular.module('72TownsendApp')
     "bedrooms": 3,
     "baths": 2,
     "garage": 0,
-    "planImage": "../../images/plans/planS.png"
+    "planImage": "images/plans/planS.png"
   },
   {
     "plan": "T",
@@ -1447,10 +1447,10 @@ angular.module('72TownsendApp')
     "bedrooms": 3,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "../../images/plans/planT.png",
-    "balconyImages": [{image: "../../images/balcony/903Balcony3.png"}, 
-                      {image: "../../images/balcony/903Balcony2.png"}, 
-                      {image: "../../images/balcony/903Balcony1.png"}]
+    "planImage": "images/plans/planT.png",
+    "balconyImages": [{image: "images/balcony/903Balcony3.png"}, 
+                      {image: "images/balcony/903Balcony2.png"}, 
+                      {image: "images/balcony/903Balcony1.png"}]
   },
   {
     "plan": "U ",
@@ -1469,34 +1469,15 @@ angular.module('72TownsendApp')
     "bedrooms": 2,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "../../images/plans/planU.png"
-  },
-  // {
-  //   "plan": "TH",
-  //   "planId": "TH",
-  //   "release": 8,
-  //   "unit": 100,
-  //   "tract": "4779-3",
-  //   "elevation": "A",
-  //   "elevationDescription": "TH - TOWNHOUSE",
-  //   "exteriorSqFt": 0,
-  //   "address": "72 Townsend Unit #100",
-  //   "floor": 1-2,
-  //   "story": 2,
-  //   "width": 24,
-  //   "interiorSqFt": 3300,
-  //   "bedrooms": 3,
-  //   "baths": 3.5,
-  //   "garage": 0,
-  //   "planImage": "TH"
-  // }
-]
+    "planImage": "images/plans/planU.png"
+  }
+];
 
 $scope.displayUnit = function displayUnit(num){
-		var unit = $filter('filter')($scope.test, {unit:num})
- 		$scope.unit = unit[0]
+		var unit = $filter('filter')($scope.test, {unit:num});
+ 		$scope.unit = unit[0];
  		$scope.floorHidden = true;
-}
+};
 
 
 });
