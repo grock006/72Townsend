@@ -307,13 +307,37 @@ hr{
 } 
 
 .image-overlay {
-    width: 70px;
-    height: 70px;
-    background-color: transparent;
+    width: 6%;
+    height: 14%;
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 40000;
     position: absolute;
     cursor: pointer;
+    text-align: center;
+    font-size: 2.8vw;
+    border-radius:50%;
   } 
+
+.inner-overlay {
+   position: absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   text-align: center;
+}
+
+.inner-text {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1em;
+    line-height: 1em;
+    font-size: 1em;
+}
 
 /////* End Desktop Custom Styles*///////////////////////////////////
 
