@@ -10,7 +10,7 @@ angular.module('72TownsendApp')
 
   	//init setting for 'sort by'
   	$scope.sort = "floor";
-    $scope.sortText = "floor";
+    $scope.sortText = "";
 
      $scope.selectListBedroom = function selectListBedroom(num){
         if(Number.isInteger(num)){
@@ -36,30 +36,16 @@ angular.module('72TownsendApp')
         }
     };
 
-    $scope.slides = [ {image: "images/balcony/903Balcony1.png"},
-                    {image: "images/balcony/903Balcony2.png"},
-                    {image: "images/balcony/903Balcony3.png"}];    
-
-
-  $scope.openBalcony = function openBalcony(unit) {
-
-    $modal.open({
-      animation: true,
-      templateUrl: 'views/balcony-modal.html',
-      controller: 'ListCtrl',
-      size: 'sm'
-    });
-
-    $scope.slides = unit.balconyImages;
-
-  };
-
 
   $scope.newUnit = function newUnit(unit, filteredItems, index){
     $rootScope.unitNumber = unit;
     $rootScope.filteredListItems = filteredItems;
     $rootScope.unitListIndex = index;
+    
     $rootScope.listShow = true;
+    
+    $rootScope.floorNumber = "floorthree";
+
     $state.go('unit')
   }
      

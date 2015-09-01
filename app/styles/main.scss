@@ -60,6 +60,12 @@ html {
   width: 100%;
 }
 
+.signature-logo{
+    margin-top: 18px;
+    width: 50%;
+    float: right;
+}
+
 /*  Landing Page Styles */
 
 .main-building-image {
@@ -142,6 +148,12 @@ html {
     li a:hover, li a:visited, li a:active{
          @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 0%);
     }
+}
+
+/* Modal Styles */
+
+.modal-body {
+    height: 623px;
 }
 
 /* List Styles */
@@ -318,6 +330,19 @@ hr{
     border-radius:50%;
   } 
 
+
+.image-overlay-sold {
+    width: 6%;
+    height: 14%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40000;
+    position: absolute;
+    cursor: none;
+    text-align: center;
+    font-size: 1.8vw;
+    border-radius:50%;
+  }   
+
 .inner-overlay {
    position: absolute;
    top:0;
@@ -330,6 +355,19 @@ hr{
 .inner-text {
     margin: auto;
     position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1em;
+    line-height: 1em;
+    font-size: 1em;
+}
+
+.inner-text-sold {
+    margin: auto;
+    position: absolute;
+    color: white;
     top: 0;
     left: 0;
     bottom: 0;
@@ -539,7 +577,7 @@ hr{
     .mobile-button-wrapper {
 
         background-color: black;
-        margin-top: 10%;
+        margin-top: 1%;
 
         h3{
           color: white;
@@ -574,6 +612,12 @@ hr{
           box-shadow: none;
         }
 
+    }
+
+    /* Modal Styles */
+
+    .modal-body {
+      height: 213px;
     }
 
     /* List Styles */

@@ -15,7 +15,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B3",
@@ -34,7 +36,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C3",
@@ -53,7 +57,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D3",
@@ -72,7 +78,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E3",
@@ -91,7 +99,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "F",
@@ -110,7 +120,9 @@
     "bedrooms": 2,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planF.png"
+    "planImage": "images/plans/planF.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "G",
@@ -129,7 +141,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planG.png"
+    "planImage": "images/plans/planG.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "H",
@@ -148,7 +162,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planH.png"
+    "planImage": "images/plans/planH.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "J3-7",
@@ -167,7 +183,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planJ.png"
+    "planImage": "images/plans/planJ.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "K3-8",
@@ -186,7 +204,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planK.png"
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "L3-7",
@@ -205,7 +225,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planL.png"
+    "planImage": "images/plans/planL.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/311_1028.jpg"}]
   },
   {
     "plan": "Q",
@@ -224,7 +246,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/312_1030.jpg"}, {"image": "images/balcony/312_1031.jpg"}]
   },
   {
     "plan": "A4-8",
@@ -243,7 +267,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B458",
@@ -262,7 +288,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C4-8",
@@ -281,7 +309,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D458",
@@ -300,7 +330,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E4-7",
@@ -319,102 +351,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
-  },
-  {
-    "plan": "J3-7",
-    "planId": "J",
-    "release": 2,
-    "unit": 409,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "J3-7 - BALCONY",
-    "exteriorSqFt": 49.8,
-    "address": "72 Townsend Unit #409",
-    "floor": 4,
-    "story": 1,
-    "width": 39,
-    "interiorSqFt": 1136,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planJ.png"
-  },
-  {
-    "plan": "K3-8",
-    "planId": "K",
-    "release": 2,
-    "unit": 410,
-    "tract": "4779-3",
-    "elevation": "X",
-    "elevationDescription": "K3-8 BMR - BALCONY",
-    "exteriorSqFt": 50.9,
-    "address": "72 Townsend Unit #410",
-    "floor": 4,
-    "story": 1,
-    "width": 21,
-    "interiorSqFt": 1219,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planK.png"
-  },
-  {
-    "plan": "L3-7",
-    "planId": "L",
-    "release": 2,
-    "unit": 411,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "L3-7 - BALCONY",
-    "exteriorSqFt": 54.6,
-    "address": "72 Townsend Unit #411",
-    "floor": 4,
-    "story": 1,
-    "width": 38,
-    "interiorSqFt": 1106,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planL.png"
-  },
-  {
-    "plan": "N",
-    "planId": "N",
-    "release": 2,
-    "unit": 408,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "N - BALCONY",
-    "exteriorSqFt": 53.9,
-    "address": "72 Townsend Unit #408",
-    "floor": 4,
-    "story": 1,
-    "width": 42,
-    "interiorSqFt": 1005,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planN.png"
-  },
-  {
-    "plan": "O",
-    "planId": "O",
-    "release": 2,
-    "unit": 407,
-    "tract": "4779-3",
-    "elevation": "A",
-    "elevationDescription": "O",
-    "exteriorSqFt": 0,
-    "address": "72 Townsend Unit #407",
-    "floor": 4,
-    "story": 1,
-    "width": 27,
-    "interiorSqFt": 851,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planO.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "P45",
@@ -433,7 +372,114 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planP.png"
+    "planImage": "images/plans/planP.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "O",
+    "planId": "O",
+    "release": 2,
+    "unit": 407,
+    "tract": "4779-3",
+    "elevation": "A",
+    "elevationDescription": "O",
+    "exteriorSqFt": 0,
+    "address": "72 Townsend Unit #407",
+    "floor": 4,
+    "story": 1,
+    "width": 27,
+    "interiorSqFt": 851,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planO.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "N",
+    "planId": "N",
+    "release": 2,
+    "unit": 408,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "N - BALCONY",
+    "exteriorSqFt": 53.9,
+    "address": "72 Townsend Unit #408",
+    "floor": 4,
+    "story": 1,
+    "width": 42,
+    "interiorSqFt": 1005,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planN.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/408_1037.jpg"}, {"image": "images/balcony/408_1040.jpg"}]
+  },
+{
+    "plan": "J3-7",
+    "planId": "J",
+    "release": 2,
+    "unit": 409,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "J3-7 - BALCONY",
+    "exteriorSqFt": 49.8,
+    "address": "72 Townsend Unit #409",
+    "floor": 4,
+    "story": 1,
+    "width": 39,
+    "interiorSqFt": 1136,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planJ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/409_1042.jpg"}]
+  },
+  {
+    "plan": "K3-8",
+    "planId": "K",
+    "release": 2,
+    "unit": 410,
+    "tract": "4779-3",
+    "elevation": "X",
+    "elevationDescription": "K3-8 BMR - BALCONY",
+    "exteriorSqFt": 50.9,
+    "address": "72 Townsend Unit #410",
+    "floor": 4,
+    "story": 1,
+    "width": 21,
+    "interiorSqFt": 1219,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/410_1048.jpg"}]
+  },
+  {
+    "plan": "L3-7",
+    "planId": "L",
+    "release": 2,
+    "unit": 411,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "L3-7 - BALCONY",
+    "exteriorSqFt": 54.6,
+    "address": "72 Townsend Unit #411",
+    "floor": 4,
+    "story": 1,
+    "width": 38,
+    "interiorSqFt": 1106,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planL.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/411_1055.jpg"}]
   },
   {
     "plan": "Q",
@@ -452,7 +498,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/412_1061.jpg"}]
   },
   {
     "plan": "A4-8",
@@ -471,7 +519,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B458",
@@ -490,7 +540,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C4-8",
@@ -509,7 +561,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D458",
@@ -528,7 +582,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E4-7",
@@ -547,102 +603,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
-  },
-  {
-    "plan": "J3-7",
-    "planId": "J",
-    "release": 3,
-    "unit": 509,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "J3-7 - BALCONY",
-    "exteriorSqFt": 49.8,
-    "address": "72 Townsend Unit #509",
-    "floor": 5,
-    "story": 1,
-    "width": 39,
-    "interiorSqFt": 1136,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planJ.png"
-  },
-  {
-    "plan": "K3-8",
-    "planId": "K",
-    "release": 3,
-    "unit": 510,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "K3-8 - BALCONY",
-    "exteriorSqFt": 50.9,
-    "address": "72 Townsend Unit #510",
-    "floor": 5,
-    "story": 1,
-    "width": 21,
-    "interiorSqFt": 1219,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planK.png"
-  },
-  {
-    "plan": "L3-7",
-    "planId": "L",
-    "release": 3,
-    "unit": 511,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "L3-7 - BALCONY",
-    "exteriorSqFt": 54.6,
-    "address": "72 Townsend Unit #511",
-    "floor": 5,
-    "story": 1,
-    "width": 38,
-    "interiorSqFt": 1106,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planL.png"
-  },
-  {
-    "plan": "N",
-    "planId": "N",
-    "release": 3,
-    "unit": 508,
-    "tract": "4779-3",
-    "elevation": "X",
-    "elevationDescription": "N BMR - BALCONY",
-    "exteriorSqFt": 53.9,
-    "address": "72 Townsend Unit #508",
-    "floor": 5,
-    "story": 1,
-    "width": 42,
-    "interiorSqFt": 1005,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planN.png"
-  },
-  {
-    "plan": "O",
-    "planId": "O",
-    "release": 3,
-    "unit": 507,
-    "tract": "4779-3",
-    "elevation": "A",
-    "elevationDescription": "O",
-    "exteriorSqFt": 0,
-    "address": "72 Townsend Unit #507",
-    "floor": 5,
-    "story": 1,
-    "width": 27,
-    "interiorSqFt": 851,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planO.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/505_1065.jpg"}]
   },
   {
     "plan": "P45",
@@ -661,7 +624,114 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planP.png"
+    "planImage": "images/plans/planP.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "O",
+    "planId": "O",
+    "release": 3,
+    "unit": 507,
+    "tract": "4779-3",
+    "elevation": "A",
+    "elevationDescription": "O",
+    "exteriorSqFt": 0,
+    "address": "72 Townsend Unit #507",
+    "floor": 5,
+    "story": 1,
+    "width": 27,
+    "interiorSqFt": 851,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planO.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/507_1070.jpg"}]
+  },
+  {
+    "plan": "N",
+    "planId": "N",
+    "release": 3,
+    "unit": 508,
+    "tract": "4779-3",
+    "elevation": "X",
+    "elevationDescription": "N BMR - BALCONY",
+    "exteriorSqFt": 53.9,
+    "address": "72 Townsend Unit #508",
+    "floor": 5,
+    "story": 1,
+    "width": 42,
+    "interiorSqFt": 1005,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planN.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "J3-7",
+    "planId": "J",
+    "release": 3,
+    "unit": 509,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "J3-7 - BALCONY",
+    "exteriorSqFt": 49.8,
+    "address": "72 Townsend Unit #509",
+    "floor": 5,
+    "story": 1,
+    "width": 39,
+    "interiorSqFt": 1136,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planJ.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "K3-8",
+    "planId": "K",
+    "release": 3,
+    "unit": 510,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "K3-8 - BALCONY",
+    "exteriorSqFt": 50.9,
+    "address": "72 Townsend Unit #510",
+    "floor": 5,
+    "story": 1,
+    "width": 21,
+    "interiorSqFt": 1219,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "L3-7",
+    "planId": "L",
+    "release": 3,
+    "unit": 511,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "L3-7 - BALCONY",
+    "exteriorSqFt": 54.6,
+    "address": "72 Townsend Unit #511",
+    "floor": 5,
+    "story": 1,
+    "width": 38,
+    "interiorSqFt": 1106,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planL.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "Q",
@@ -680,7 +750,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/512_1079.jpg"}]
   },
   {
     "plan": "A4-8",
@@ -699,7 +771,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B6",
@@ -718,7 +792,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C4-8",
@@ -737,7 +813,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D67",
@@ -756,7 +834,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E4-7",
@@ -775,102 +855,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
-  },
-  {
-    "plan": "J3-7",
-    "planId": "J",
-    "release": 4,
-    "unit": 609,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "J3-7 - BALCONY",
-    "exteriorSqFt": 49.8,
-    "address": "72 Townsend Unit #609",
-    "floor": 6,
-    "story": 1,
-    "width": 39,
-    "interiorSqFt": 1136,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planJ.png"
-  },
-  {
-    "plan": "K3-8",
-    "planId": "K",
-    "release": 4,
-    "unit": 610,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "K3-8 - BALCONY",
-    "exteriorSqFt": 50.9,
-    "address": "72 Townsend Unit #610",
-    "floor": 6,
-    "story": 1,
-    "width": 21,
-    "interiorSqFt": 1219,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planK.png"
-  },
-  {
-    "plan": "L3-7",
-    "planId": "L",
-    "release": 4,
-    "unit": 611,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "L3-7 - BALCONY",
-    "exteriorSqFt": 54,
-    "address": "72 Townsend Unit #611",
-    "floor": 6,
-    "story": 1,
-    "width": 38,
-    "interiorSqFt": 1106,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planL.png"
-  },
-  {
-    "plan": "N",
-    "planId": "N",
-    "release": 4,
-    "unit": 608,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "N - BALCONY",
-    "exteriorSqFt": 47,
-    "address": "72 Townsend Unit #608",
-    "floor": 6,
-    "story": 1,
-    "width": 42,
-    "interiorSqFt": 1005,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planN.png"
-  },
-  {
-    "plan": "O",
-    "planId": "O",
-    "release": 4,
-    "unit": 607,
-    "tract": "4779-3",
-    "elevation": "A",
-    "elevationDescription": "O",
-    "exteriorSqFt": 0,
-    "address": "72 Townsend Unit #607",
-    "floor": 6,
-    "story": 1,
-    "width": 27,
-    "interiorSqFt": 851,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planO.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/605_1083.jpg"}]
   },
   {
     "plan": "P67",
@@ -889,7 +876,114 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planP.png"
+    "planImage": "images/plans/planP.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "O",
+    "planId": "O",
+    "release": 4,
+    "unit": 607,
+    "tract": "4779-3",
+    "elevation": "A",
+    "elevationDescription": "O",
+    "exteriorSqFt": 0,
+    "address": "72 Townsend Unit #607",
+    "floor": 6,
+    "story": 1,
+    "width": 27,
+    "interiorSqFt": 851,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planO.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "N",
+    "planId": "N",
+    "release": 4,
+    "unit": 608,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "N - BALCONY",
+    "exteriorSqFt": 47,
+    "address": "72 Townsend Unit #608",
+    "floor": 6,
+    "story": 1,
+    "width": 42,
+    "interiorSqFt": 1005,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planN.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/608_1085.jpg"}, {"image": "images/balcony/608_1091.jpg"}]
+  },
+  {
+    "plan": "J3-7",
+    "planId": "J",
+    "release": 4,
+    "unit": 609,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "J3-7 - BALCONY",
+    "exteriorSqFt": 49.8,
+    "address": "72 Townsend Unit #609",
+    "floor": 6,
+    "story": 1,
+    "width": 39,
+    "interiorSqFt": 1136,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planJ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/609_1096.jpg"}]
+  },
+  {
+    "plan": "K3-8",
+    "planId": "K",
+    "release": 4,
+    "unit": 610,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "K3-8 - BALCONY",
+    "exteriorSqFt": 50.9,
+    "address": "72 Townsend Unit #610",
+    "floor": 6,
+    "story": 1,
+    "width": 21,
+    "interiorSqFt": 1219,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/610_1103.jpg"}]
+  },
+  {
+    "plan": "L3-7",
+    "planId": "L",
+    "release": 4,
+    "unit": 611,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "L3-7 - BALCONY",
+    "exteriorSqFt": 54,
+    "address": "72 Townsend Unit #611",
+    "floor": 6,
+    "story": 1,
+    "width": 38,
+    "interiorSqFt": 1106,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planL.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/611_1109.jpg"}]
   },
   {
     "plan": "Q",
@@ -908,7 +1002,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/612_1113.jpg"}]
   },
   {
     "plan": "A4-8",
@@ -927,7 +1023,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B7",
@@ -946,7 +1044,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C4-8",
@@ -965,7 +1065,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D67",
@@ -984,7 +1086,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E4-7",
@@ -1003,102 +1107,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
-  },
-  {
-    "plan": "J3-7",
-    "planId": "J",
-    "release": 5,
-    "unit": 709,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "J3-7 - BALCONY",
-    "exteriorSqFt": 49.8,
-    "address": "72 Townsend Unit #709",
-    "floor": 7,
-    "story": 1,
-    "width": 39,
-    "interiorSqFt": 1136,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planJ.png"
-  },
-  {
-    "plan": "K3-8",
-    "planId": "K",
-    "release": 5,
-    "unit": 710,
-    "tract": "4779-3",
-    "elevation": "X",
-    "elevationDescription": "K3-8 BMR - BALCONY",
-    "exteriorSqFt": 50.9,
-    "address": "72 Townsend Unit #710",
-    "floor": 7,
-    "story": 1,
-    "width": 21,
-    "interiorSqFt": 1219,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planK.png"
-  },
-  {
-    "plan": "L3-7",
-    "planId": "L",
-    "release": 5,
-    "unit": 711,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "L3-7 - BALCONY",
-    "exteriorSqFt": 54,
-    "address": "72 Townsend Unit #711",
-    "floor": 7,
-    "story": 1,
-    "width": 38,
-    "interiorSqFt": 1106,
-    "bedrooms": 2,
-    "baths": 2,
-    "garage": 0,
-    "planImage": "images/plans/planL.png"
-  },
-  {
-    "plan": "N",
-    "planId": "N",
-    "release": 5,
-    "unit": 708,
-    "tract": "4779-3",
-    "elevation": "B",
-    "elevationDescription": "N - BALCONY",
-    "exteriorSqFt": 47,
-    "address": "72 Townsend Unit #708",
-    "floor": 7,
-    "story": 1,
-    "width": 42,
-    "interiorSqFt": 1005,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planN.png"
-  },
-  {
-    "plan": "O",
-    "planId": "O",
-    "release": 5,
-    "unit": 707,
-    "tract": "4779-3",
-    "elevation": "A",
-    "elevationDescription": "O",
-    "exteriorSqFt": 0,
-    "address": "72 Townsend Unit #707",
-    "floor": 7,
-    "story": 1,
-    "width": 27,
-    "interiorSqFt": 851,
-    "bedrooms": 1,
-    "baths": 1.5,
-    "garage": 0,
-    "planImage": "images/plans/planO.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "P67",
@@ -1117,7 +1128,114 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planP.png"
+    "planImage": "images/plans/planP.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+   {
+    "plan": "O",
+    "planId": "O",
+    "release": 5,
+    "unit": 707,
+    "tract": "4779-3",
+    "elevation": "A",
+    "elevationDescription": "O",
+    "exteriorSqFt": 0,
+    "address": "72 Townsend Unit #707",
+    "floor": 7,
+    "story": 1,
+    "width": 27,
+    "interiorSqFt": 851,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planO.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "N",
+    "planId": "N",
+    "release": 5,
+    "unit": 708,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "N - BALCONY",
+    "exteriorSqFt": 47,
+    "address": "72 Townsend Unit #708",
+    "floor": 7,
+    "story": 1,
+    "width": 42,
+    "interiorSqFt": 1005,
+    "bedrooms": 1,
+    "baths": 1.5,
+    "garage": 0,
+    "planImage": "images/plans/planN.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "J3-7",
+    "planId": "J",
+    "release": 5,
+    "unit": 709,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "J3-7 - BALCONY",
+    "exteriorSqFt": 49.8,
+    "address": "72 Townsend Unit #709",
+    "floor": 7,
+    "story": 1,
+    "width": 39,
+    "interiorSqFt": 1136,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planJ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/709_1119.jpg"}]
+  },
+  {
+    "plan": "K3-8",
+    "planId": "K",
+    "release": 5,
+    "unit": 710,
+    "tract": "4779-3",
+    "elevation": "X",
+    "elevationDescription": "K3-8 BMR - BALCONY",
+    "exteriorSqFt": 50.9,
+    "address": "72 Townsend Unit #710",
+    "floor": 7,
+    "story": 1,
+    "width": 21,
+    "interiorSqFt": 1219,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": ""
+  },
+  {
+    "plan": "L3-7",
+    "planId": "L",
+    "release": 5,
+    "unit": 711,
+    "tract": "4779-3",
+    "elevation": "B",
+    "elevationDescription": "L3-7 - BALCONY",
+    "exteriorSqFt": 54,
+    "address": "72 Townsend Unit #711",
+    "floor": 7,
+    "story": 1,
+    "width": 38,
+    "interiorSqFt": 1106,
+    "bedrooms": 2,
+    "baths": 2,
+    "garage": 0,
+    "planImage": "images/plans/planL.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/711_1124.jpg"}]
   },
   {
     "plan": "Q",
@@ -1136,7 +1254,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/712_1129.jpg"}]
   },
   {
     "plan": "A4-8",
@@ -1155,7 +1275,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planA.png"
+    "planImage": "images/plans/planA.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "B458",
@@ -1174,7 +1296,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planB.png"
+    "planImage": "images/plans/planB.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "C4-8",
@@ -1193,7 +1317,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planC.png"
+    "planImage": "images/plans/planC.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "D458",
@@ -1212,7 +1338,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planD.png"
+    "planImage": "images/plans/planD.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "E8",
@@ -1231,7 +1359,9 @@
     "bedrooms": 1,
     "baths": 1,
     "garage": 0,
-    "planImage": "images/plans/planE.png"
+    "planImage": "images/plans/planE.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "J8",
@@ -1250,7 +1380,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planJ8.png"
+    "planImage": "images/plans/planJ8.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "K3-8",
@@ -1269,7 +1401,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planK.png"
+    "planImage": "images/plans/planK.png",
+    "sold": false,
+    "balconyImages": ""
   },
   {
     "plan": "L8",
@@ -1288,7 +1422,9 @@
     "bedrooms": 2,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planL8.png"
+    "planImage": "images/plans/planL8.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/808_1134.jpg"}]
   },
   {
     "plan": "Q",
@@ -1307,7 +1443,9 @@
     "bedrooms": 1,
     "baths": 1.5,
     "garage": 0,
-    "planImage": "images/plans/planQ.png"
+    "planImage": "images/plans/planQ.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/809_1138.jpg"}]
   },
   {
     "plan": "R",
@@ -1326,7 +1464,9 @@
     "bedrooms": 3,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "images/plans/planR.png"
+    "planImage": "images/plans/planR.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/901_1171.jpg"}, {"image": "images/balcony/901_1174.jpg"}, {"image": "images/balcony/901_1222.jpg"}]
   },
   {
     "plan": "S",
@@ -1345,7 +1485,9 @@
     "bedrooms": 3,
     "baths": 2,
     "garage": 0,
-    "planImage": "images/plans/planS.png"
+    "planImage": "images/plans/planS.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/902_1145.jpg"}, {"image": "images/balcony/902_1191.jpg"}, {"image": "images/balcony/902_1229.jpg"}, {"image": "images/balcony/902_1238.jpg"}, {"image": "images/balcony/902_1244.jpg"}]
   },
   {
     "plan": "T",
@@ -1365,9 +1507,8 @@
     "baths": 2.5,
     "garage": 0,
     "planImage": "images/plans/planT.png",
-    "balconyImages": [{"image": "images/balcony/903Balcony3.png"}, 
-                      {"image": "images/balcony/903Balcony2.png"}, 
-                      {"image": "images/balcony/903Balcony1.png"}]
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/903_1152.jpg"}, {"image": "images/balcony/903_1247.jpg"}, {"image": "images/balcony/903_1252.jpg"}, {"image": "images/balcony/903_1260.jpg"}]
   },
   {
     "plan": "U ",
@@ -1386,6 +1527,8 @@
     "bedrooms": 2,
     "baths": 2.5,
     "garage": 0,
-    "planImage": "images/plans/planU.png"
+    "planImage": "images/plans/planU.png",
+    "sold": false,
+    "balconyImages": [ {"image": "images/balcony/904_1158.jpg"}, {"image": "images/balcony/904_1163.jpg"}, {"image": "images/balcony/904_1265.jpg"}, {"image": "images/balcony/904_1266.jpg"}, {"image": "images/balcony/904_1267.jpg"}, {"image": "images/balcony/904_1275.jpg"}]
   }
 ]

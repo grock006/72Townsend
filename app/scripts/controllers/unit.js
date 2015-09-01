@@ -8,7 +8,7 @@
  * Controller of the 72TownsendApp
  */
 angular.module('72TownsendApp')
-  .controller('UnitCtrl', function($scope, $state, $rootScope) {
+  .controller('UnitCtrl', function($scope, $state, $rootScope, $modal) {
 
     $scope.showNext = function showNext(filteredListItems, unitListIndex){
         $rootScope.unitNumber = $rootScope.filteredListItems[unitListIndex + 1];
@@ -19,6 +19,23 @@ angular.module('72TownsendApp')
     $scope.showPrevious = function showPrevious(filteredListItems, unitListIndex){
         $rootScope.unitNumber = $rootScope.filteredListItems[unitListIndex - 1];
         $rootScope.unitListIndex = unitListIndex - 1;
-    };
+    }; 
+
+
+  $scope.openBalcony = function openBalcony(unitNumber) {
+
+    $modal.open({
+      animation: true,
+      templateUrl: '../../views/balcony-modal.html',
+      controller: 'ModalCtrl',
+      size: 'lg',
+      resolve: {
+        images: function () {
+          return unitNumber.balconyImages;
+        }
+      }
+    });
+
+  };
    
 });
