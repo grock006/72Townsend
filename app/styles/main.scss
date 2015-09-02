@@ -54,6 +54,7 @@ html {
     min-height: 127px;
     border-bottom: 10px solid #f8d63e;
     padding: 0px 42px;
+    z-index: 400;
 }
 
 .main-logo {
@@ -127,15 +128,14 @@ html {
 
 
 .dropdown-menu {
-   @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
+    background-color: white;
     width: 100%;
-    font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
     margin: 0px;
     padding: 0px;
-    font-size: 14px;
+    font-size: 12px;
     box-shadow: none;
     cursor:pointer;
 
@@ -185,25 +185,6 @@ html {
       outline: 0;
        @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
     }
-  
-    // select{
-    //   @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
-    //   color: #333;
-    //   border-top: 1px solid rgba(225,187,1,0.6);
-    //   border-right: 1px solid rgba(225,187,1,0.8);
-    //   border-bottom: 1px solid rgba(225,187,1,0.9);
-    //   border-left: 1px solid rgba(225,187,1,0.8);
-    //   font-weight: bold;
-    //   padding: 11px 64px;
-    //   text-transform: uppercase;
-    //   width: 100%;
-    //   margin-bottom: 20px;
-    //   letter-spacing: 2px;
-    //   text-align: center;
-    //   height: 43px;
-    // }
-
-
 }
 
 .list-group-item{
@@ -258,7 +239,7 @@ html {
 
 .yellow-border{
     border: 1px solid #f8d63e;;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .yellow-border h2{
@@ -319,8 +300,8 @@ hr{
 } 
 
 .image-overlay {
-    width: 6%;
-    height: 14%;
+    width: 70px;
+    height: 70px;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 40000;
     position: absolute;
@@ -328,12 +309,13 @@ hr{
     text-align: center;
     font-size: 2.8vw;
     border-radius:50%;
+    border: none;
   } 
 
 
 .image-overlay-sold {
-    width: 6%;
-    height: 14%;
+    width: 70px;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 40000;
     position: absolute;
@@ -341,6 +323,7 @@ hr{
     text-align: center;
     font-size: 1.8vw;
     border-radius:50%;
+    border: none;
   }   
 
 .inner-overlay {
@@ -367,7 +350,7 @@ hr{
 .inner-text-sold {
     margin: auto;
     position: absolute;
-    color: white;
+    color: gray;
     top: 0;
     left: 0;
     bottom: 0;
@@ -461,6 +444,67 @@ hr{
           letter-spacing: 1px;
         }
     }
+
+     .image-overlay-mobile {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 40000;
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        font-size: 5.8vw;
+        border-radius:50%;
+        border: none;
+    } 
+
+
+    .image-overlay-mobile-sold {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 40000;
+        position: absolute;
+        cursor: none;
+        text-align: center;
+        font-size: 3.8vw;
+        border-radius:50%;
+        border: none;
+      }   
+
+      .inner-overlay {
+         position: absolute;
+         top:0;
+         bottom:0;
+         left:0;
+         right:0;
+         text-align: center;
+      }
+
+      .inner-text-mobile {
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 1em;
+          line-height: 1em;
+          font-size: 1em;
+      }
+
+      .inner-text-mobile-sold {
+          margin: auto;
+          position: absolute;
+          color: gray;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 1em;
+          line-height: 1em;
+          font-size: 1em;
+      }
 
      /* Unit Styles */
 
@@ -691,13 +735,65 @@ hr{
     }
 
      .image-overlay-mobile {
-        width: 60px;
-        height: 60px;
-        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
         z-index: 40000;
         position: absolute;
         cursor: pointer;
+        text-align: center;
+        font-size: 6.8vw;
+        border-radius:50%;
+        border: none;
     } 
+
+
+    .image-overlay-mobile-sold {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 40000;
+        position: absolute;
+        cursor: none;
+        text-align: center;
+        font-size: 3.8vw;
+        border-radius:50%;
+        border: none;
+      }   
+
+      .inner-overlay {
+         position: absolute;
+         top:0;
+         bottom:0;
+         left:0;
+         right:0;
+         text-align: center;
+      }
+
+      .inner-text-mobile {
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 1em;
+          line-height: 1em;
+          font-size: 1em;
+      }
+
+      .inner-text-mobile-sold {
+          margin: auto;
+          position: absolute;
+          color: gray;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 1em;
+          line-height: 1em;
+          font-size: 1em;
+      }
 
      .floor-main-floor {
        width: 100%;

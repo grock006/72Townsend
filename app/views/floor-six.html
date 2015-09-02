@@ -31,19 +31,143 @@
 
             <div class="row">
                 <div class="col-sm-12 col-md-12" style="position:relative">
-                    <img src="images/floors/floor6_desktop.png" class="floor-main hidden-xs">
-                         <div class="image-overlay" style="top:63%;left:78%" ng-click="displayUnit(601)"></div>
-                         <div class="image-overlay" style="top:65%;left:65%" ng-click="displayUnit(602)"></div>
-                         <div class="image-overlay" style="top:59%;left:55%" ng-click="displayUnit(603)"></div>
-                         <div class="image-overlay" style="top:59%;left:44%" ng-click="displayUnit(604)"></div>
-                         <div class="image-overlay" style="top:61%;left:33%" ng-click="displayUnit(605)"></div>
-                         <div class="image-overlay" style="top:61%;left:21%" ng-click="displayUnit(606)"></div>
-                         <div class="image-overlay" style="top:33%;left:21%" ng-click="displayUnit(607)"></div>
-                         <div class="image-overlay" style="top:14%;left:21%" ng-click="displayUnit(608)"></div>
-                         <div class="image-overlay" style="top:13%;left:36%" ng-click="displayUnit(609)"></div>
-                         <div class="image-overlay" style="top:14%;left:51%" ng-click="displayUnit(610)"></div>
-                         <div class="image-overlay" style="top:15%;left:66%" ng-click="displayUnit(611)"></div>
-                         <div class="image-overlay" style="top:16%;left:78%" ng-click="displayUnit(612)"></div>
+                    <img src="images/floors/floor4-7_desktop.png" class="floor-main hidden-xs">
+                         <button ng-class="checkUnitSold(601) ? 'image-overlay-sold': 'image-overlay'" 
+                              style="top:63%;left:78%"
+                              ng-click="displayUnit(601)"
+                              ng-disabled="checkUnitSold(601) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(601) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(601) ? 'SOLD': '601'}}
+                            </div>
+                          </div>
+                         </button>
+                        
+                         <button ng-class="checkUnitSold(602) ? 'image-overlay-sold': 'image-overlay'" 
+                             style="top:65%;left:65%"                 
+                              ng-click="displayUnit(602)"
+                              ng-disabled="checkUnitSold(602) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(602) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(602) ? 'SOLD': '602'}}
+                            </div>
+                          </div>
+                         </button>
+                        
+                         <button ng-class="checkUnitSold(603) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:59%;left:55%"
+                              ng-click="displayUnit(603)"
+                              ng-disabled="checkUnitSold(603) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(603) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(603) ? 'SOLD': '603'}}
+                            </div>
+                          </div>
+                         </button>
+                         
+                         <button ng-class="checkUnitSold(604) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:59%;left:44%"
+                              ng-click="displayUnit(604)"
+                              ng-disabled="checkUnitSold(604) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(604) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(604) ? 'SOLD': '604'}}
+                            </div>
+                          </div>
+                         </button>
+                         
+                         <button ng-class="checkUnitSold(605) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:61%;left:33%"
+                              ng-click="displayUnit(605)"
+                              ng-disabled="checkUnitSold(605) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(605) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(605) ? 'SOLD': '605'}}
+                            </div>
+                          </div>
+                         </button>
+                         
+          
+                         <button ng-class="checkUnitSold(606) ? 'image-overlay-sold': 'image-overlay'" 
+                             style="top:61%;left:21%"
+                              ng-click="displayUnit(606)"
+                              ng-disabled="checkUnitSold(606) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(606) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(606) ? 'SOLD': '606'}}
+                            </div>
+                          </div>
+                         </button>
+
+                         
+                         <button ng-class="checkUnitSold(607) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:33%;left:21%"
+                              ng-click="displayUnit(607)"
+                              ng-disabled="checkUnitSold(607) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(607) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(607) ? 'SOLD': '607'}}
+                            </div>
+                          </div>
+                         </button>
+
+
+                         <button ng-class="checkUnitSold(608) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:14%;left:21%"
+                              ng-click="displayUnit(608)"
+                              ng-disabled="checkUnitSold(608) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(608) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(608) ? 'SOLD': '608'}}
+                            </div>
+                          </div>
+                         </button>
+
+                         
+                        <button ng-class="checkUnitSold(609) ? 'image-overlay-sold': 'image-overlay'" 
+                             style="top:13%;left:36%"
+                              ng-click="displayUnit(609)"
+                              ng-disabled="checkUnitSold(609) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(609) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(609) ? 'SOLD': '609'}}
+                            </div>
+                          </div>
+                         </button>
+                         
+                         <button ng-class="checkUnitSold(610) ? 'image-overlay-sold': 'image-overlay'" 
+                            style="top:14%;left:51%"                
+                              ng-click="displayUnit(610)"
+                              ng-disabled="checkUnitSold(610) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(610) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(610) ? 'SOLD': '610'}}
+                            </div>
+                          </div>
+                         </button>
+                         
+                         <button ng-class="checkUnitSold(611) ? 'image-overlay-sold': 'image-overlay'" 
+                             style="top:15%;left:66%"     
+                              ng-click="displayUnit(611)"
+                              ng-disabled="checkUnitSold(611) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(611) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(611) ? 'SOLD': '611'}}
+                            </div>
+                          </div>
+                         </button>
+                      
+                         
+                         <button ng-class="checkUnitSold(612) ? 'image-overlay-sold': 'image-overlay'" 
+                               style="top:16%;left:78%"
+                              ng-click="displayUnit(612)"
+                              ng-disabled="checkUnitSold(612) ? true : false">
+                          <div class="inner-overlay">
+                            <div ng-class="checkUnitSold(612) ? 'inner-text-sold': 'inner-text'" >
+                              {{checkUnitSold(612) ? 'SOLD': '612'}}
+                            </div>
+                          </div>
+                         </button>
                 </div>
             </div>
               
@@ -78,19 +202,141 @@
     
     <div class="row">
         <div class="col-sm-12 col-xs-12" style="position:relative">
-            <img src="images/floors/floor6_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white">
-            <div class="image-overlay-mobile" style="top:8%;left:24%" ng-click="displayUnit(612)"></div>
-            <div class="image-overlay-mobile" style="top:20%;left:24%" ng-click="displayUnit(611)"></div>
-            <div class="image-overlay-mobile" style="top:32%;left:24%" ng-click="displayUnit(610)"></div>
-            <div class="image-overlay-mobile" style="top:58%;left:20%" ng-click="displayUnit(609)"></div>
-            <div class="image-overlay-mobile" style="top:78%;left:15%" ng-click="displayUnit(608)"></div>
-            <div class="image-overlay-mobile" style="top:78%;left:38%" ng-click="displayUnit(607)"></div>
-            <div class="image-overlay-mobile" style="top:78%;left:58%" ng-click="displayUnit(606)"></div>
-            <div class="image-overlay-mobile" style="top:61%;left:58%" ng-click="displayUnit(605)"></div>
-            <div class="image-overlay-mobile" style="top:49%;left:58%" ng-click="displayUnit(604)"></div>
-            <div class="image-overlay-mobile" style="top:36%;left:58%" ng-click="displayUnit(603)"></div>
-            <div class="image-overlay-mobile" style="top:25%;left:58%" ng-click="displayUnit(602)"></div>
-            <div class="image-overlay-mobile" style="top:9%;left:58%" ng-click="displayUnit(601)"></div>
+            <img src="images/floors/floor4-7_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white">
+               <button ng-class="checkUnitSold(601) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                     style="top:12%;left:58%"
+                    ng-click="displayUnit(601)"
+                    ng-disabled="checkUnitSold(601) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(601) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(601) ? 'SOLD': '601'}}
+                    </div>
+                </div>
+            </button>
+
+
+            <button ng-class="checkUnitSold(602) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'"  
+                   style="top:25%;left:58%"
+                    ng-click="displayUnit(602)"
+                    ng-disabled="checkUnitSold(602) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(602) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(602) ? 'SOLD': '602'}}
+                    </div>
+                </div>
+            </button>
+
+
+    
+        <button ng-class="checkUnitSold(603) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:36%;left:58%"
+                    ng-click="displayUnit(603)"
+                    ng-disabled="checkUnitSold(603) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(603) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(603) ? 'SOLD': '603'}}
+                    </div>
+                </div>
+            </button>
+     
+        <button ng-class="checkUnitSold(604) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:49%;left:58%"
+                    ng-click="displayUnit(604)"
+                    ng-disabled="checkUnitSold(604) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(604) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(604) ? 'SOLD': '604'}}
+                    </div>
+                </div>
+            </button> 
+      
+        <button ng-class="checkUnitSold(605) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:61%;left:58%"
+                    ng-click="displayUnit(605)"
+                    ng-disabled="checkUnitSold(605) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(605) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(605) ? 'SOLD': '605'}}
+                    </div>
+                </div>
+            </button> 
+     
+        <button ng-class="checkUnitSold(606) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                     style="top:78%;left:58%"
+                    ng-click="displayUnit(606)"
+                    ng-disabled="checkUnitSold(606) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(606) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(606) ? 'SOLD': '606'}}
+                    </div>
+                </div>
+            </button> 
+    
+        <button ng-class="checkUnitSold(607) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:78%;left:38%"
+                    ng-click="displayUnit(607)"
+                    ng-disabled="checkUnitSold(607) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(607) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(607) ? 'SOLD': '607'}}
+                    </div>
+                </div>
+            </button> 
+       
+        <button ng-class="checkUnitSold(608) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:78%;left:15%"
+                    ng-click="displayUnit(608)"
+                    ng-disabled="checkUnitSold(608) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(608) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(608) ? 'SOLD': '608'}}
+                    </div>
+                </div>
+            </button> 
+       
+        <button ng-class="checkUnitSold(609) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:58%;left:20%"            
+                    ng-click="displayUnit(609)"
+                    ng-disabled="checkUnitSold(609) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(609) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(609) ? 'SOLD': '609'}}
+                    </div>
+                </div>
+            </button> 
+      
+        <button ng-class="checkUnitSold(610) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:37%;left:24%"   
+                    ng-click="displayUnit(610)"
+                    ng-disabled="checkUnitSold(610) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(610) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(610) ? 'SOLD': '610'}}
+                    </div>
+                </div>
+            </button> 
+      
+        <button ng-class="checkUnitSold(611) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                   style="top:20%;left:24%"    
+                    ng-click="displayUnit(611)"
+                    ng-disabled="checkUnitSold(611) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(611) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(611) ? 'SOLD': '611'}}
+                    </div>
+                </div>
+            </button> 
+  
+        <button ng-class="checkUnitSold(612) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
+                     style="top:10%;left:24%"
+                    ng-click="displayUnit(612)"
+                    ng-disabled="checkUnitSold(612) ? true : false">
+                <div class="inner-overlay">
+                    <div ng-class="checkUnitSold(612) ? 'inner-text-mobile-sold': 'inner-text-mobile'" >
+                        {{checkUnitSold(612) ? 'SOLD': '612'}}
+                    </div>
+                </div>
+            </button>
         </div>
     </div>
 

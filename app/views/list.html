@@ -21,14 +21,18 @@
 
                           <div dropdown>
                             <button type="button" class="btn" dropdown-toggle>
-                                SORT BY: {{sortText | uppercase}}
+                                {{sortText | uppercase}}
                               <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-                              <li><a ng-click="selectSort('floor')">FLOOR</a></li>
-                              <li><a ng-click="selectSort('bedrooms')">BEDROOMS</a></li>
-                              <li><a ng-click="selectSort('baths')">BATHS</a></li>
-                              <li><a ng-click="selectSort('interiorSqFt')">SQUARE FOOTAGE</a></li>
+                              <li><a ng-click="selectSort('floor')">FLOOR: LOW TO HIGH</a></li>
+                              <li><a ng-click="selectSort('-floor')">FLOOR: HIGH TO LOW</a></li>
+                              <li><a ng-click="selectSort('bedrooms')">BEDROOMS: LOW TO HIGH</a></li>
+                              <li><a ng-click="selectSort('-bedrooms')">BEDROOMS: HIGH TO LOW</a></li>
+                              <li><a ng-click="selectSort('baths')">BATHS: LOW TO HIGH</a></li>
+                              <li><a ng-click="selectSort('-baths')">BATHS: HIGH TO LOW</a></li>
+                              <li><a ng-click="selectSort('interiorSqFt')">SQUARE FOOTAGE: LOW TO HIGH</a></li>
+                              <li><a ng-click="selectSort('-interiorSqFt')">SQUARE FOOTAGE: HIGH TO LOW</a></li>
                             </ul>
                           </div>
                                                 
@@ -40,8 +44,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-8 col-md-8  list-group">
-            {{names}}
-            <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | orderBy:sort ))">
+            <div ng-repeat="item in (filteredItems = (test | filter:{bedrooms:bedrooms} | filter:{sold:false} | orderBy:sort ))">
               <div class="row list-group-item">
                     <div class="col-sm-3 col-md-3 hidden-xs">
                           <img ng-src="{{item.planImage}}" style="height:150px" class="img-thumbnail"> 

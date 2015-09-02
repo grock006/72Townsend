@@ -6,6 +6,16 @@ angular.module('72TownsendApp')
      $http.get("72Townsend.json")
         .success( function(data){
             $scope.test = data;
+        
+        $scope.checkUnitSold = function checkUnitSold(num){         
+            
+            var unitCheck = $filter('filter')($scope.test, {unit:num});
+            var unitSold = unitCheck[0].sold;
+           
+            return unitSold;
+          }
+
+        
         });
 
     $scope.displayUnit = function displayUnit(num){
@@ -36,19 +46,19 @@ angular.module('72TownsendApp')
              $rootScope.floorNumber = "floornine";
           }
 
-         $rootScope.filteredListItems = $filter('filter')($scope.test, {floor:floorNumber});
-         var secondNumber = num.toString().charAt(1);
-         var thirdNumber  = num.toString().charAt(2);
-         
-         if(secondNumber === "0"){
-            $rootScope.unitListIndex = parseInt(thirdNumber) - 1;
-         }
-         else{
-            $rootScope.unitListIndex = parseInt(secondNumber + thirdNumber) - 1;
-         }
-         
-         $rootScope.listShow = false;    
-         $state.go('unit');
+         $rootScope.filteredListItems = $filter('filter')($scope.test, {floor:floorNumber, sold:false});
+             var secondNumber = num.toString().charAt(1);
+             var thirdNumber  = num.toString().charAt(2);
+             
+             if(secondNumber === "0"){
+                $rootScope.unitListIndex = parseInt(thirdNumber) - 1;
+             }
+             else{
+                $rootScope.unitListIndex = parseInt(secondNumber + thirdNumber) - 1;
+             }
+             
+             $rootScope.listShow = false;    
+             $state.go('unit');
     }
 
 

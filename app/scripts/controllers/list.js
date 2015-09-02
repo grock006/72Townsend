@@ -10,7 +10,7 @@ angular.module('72TownsendApp')
 
   	//init setting for 'sort by'
   	$scope.sort = "floor";
-    $scope.sortText = "";
+    $scope.sortText = "sort by";
 
      $scope.selectListBedroom = function selectListBedroom(num){
         if(Number.isInteger(num)){
@@ -26,13 +26,31 @@ angular.module('72TownsendApp')
     };
 
     $scope.selectSort = function selectSort(str){
-        if(str === 'interiorSqFt'){
-            $scope.sort = 'interiorSqFt';
-            $scope.sortText = 'Square Footage';
+        $scope.sortText = str;
+    
+        if(str === 'floor'){
+            $scope.sortText = 'Floor: Low To High';
         }
-        else{
-            $scope.sort = str;
-            $scope.sortText = str;
+        if(str === '-floor'){
+            $scope.sortText = 'Floor: High To Low';
+        }
+         if(str === 'bedrooms'){
+            $scope.sortText = 'Bedrooms: Low To High';
+        }
+        if(str === '-bedrooms'){
+            $scope.sortText = 'Bedrooms: High To Low';
+        }
+         if(str === 'baths'){
+            $scope.sortText = 'Baths: Low To High';
+        }
+        if(str === '-baths'){
+            $scope.sortText = 'Baths: High To Low';
+        }
+        if(str === 'interiorSqFt'){
+            $scope.sortText = 'Square Footage: Low To High';
+        }
+        if(str === '-interiorSqFt'){
+            $scope.sortText = 'Square Footage: High To Low';
         }
     };
 
