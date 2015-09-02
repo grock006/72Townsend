@@ -16,7 +16,7 @@
     "baths": 1,
     "garage": 0,
     "planImage": "images/plans/planA.png",
-    "sold": true,
+    "sold": false,
     "balconyImages": ""
   },
   {
@@ -100,7 +100,7 @@
     "baths": 1,
     "garage": 0,
     "planImage": "images/plans/planE.png",
-    "sold": true,
+    "sold": false,
     "balconyImages": ""
   },
   {
@@ -121,7 +121,7 @@
     "baths": 1,
     "garage": 0,
     "planImage": "images/plans/planF.png",
-    "sold": true,
+    "sold": false,
     "balconyImages": ""
   },
   {
@@ -247,7 +247,7 @@
     "baths": 1.5,
     "garage": 0,
     "planImage": "images/plans/planQ.png",
-    "sold": true,
+    "sold": false,
     "balconyImages": [ {"image": "images/balcony/312_1030.jpg"}, {"image": "images/balcony/312_1031.jpg"}]
   },
   {

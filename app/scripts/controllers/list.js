@@ -26,8 +26,8 @@ angular.module('72TownsendApp')
     };
 
     $scope.selectSort = function selectSort(str){
-        $scope.sortText = str;
-    
+        $scope.sort = str;
+
         if(str === 'floor'){
             $scope.sortText = 'Floor: Low To High';
         }

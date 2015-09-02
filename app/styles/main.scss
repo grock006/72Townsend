@@ -54,7 +54,7 @@ html {
     min-height: 127px;
     border-bottom: 10px solid #f8d63e;
     padding: 0px 42px;
-    z-index: 400;
+    z-index: 1000;
 }
 
 .main-logo {
@@ -126,6 +126,13 @@ html {
     }
 }
 
+.floor-wrapper{
+    position: absolute;
+    top: 19%;
+    left: 38%;
+    background-color:black
+}
+
 
 .dropdown-menu {
     background-color: white;
@@ -146,7 +153,7 @@ html {
     }
 
     li a:hover, li a:visited, li a:active{
-         @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 0%);
+          background-color: rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -154,6 +161,10 @@ html {
 
 .modal-body {
     height: 623px;
+}
+
+.carousel-indicators {
+    bottom: 0px;
 }
 
 /* List Styles */
@@ -303,7 +314,7 @@ hr{
     width: 70px;
     height: 70px;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 40000;
+    z-index: 900;
     position: absolute;
     cursor: pointer;
     text-align: center;
@@ -317,7 +328,7 @@ hr{
     width: 70px;
     height: 70px;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 40000;
+    z-index: 900;
     position: absolute;
     cursor: none;
     text-align: center;
@@ -374,6 +385,7 @@ hr{
       padding: 0px;
       min-height: 95px;
       border-bottom: 3px solid #f8d63e;
+      z-index: 1000;
     }
 
     .main-logo {
@@ -449,7 +461,7 @@ hr{
         width: 70px;
         height: 70px;
         background-color: rgba(255, 255, 255, 0.5);
-        z-index: 40000;
+        z-index: 900;
         position: absolute;
         cursor: pointer;
         text-align: center;
@@ -463,7 +475,7 @@ hr{
         width: 70px;
         height: 70px;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 40000;
+        z-index: 900;
         position: absolute;
         cursor: none;
         text-align: center;
@@ -602,6 +614,7 @@ hr{
       padding: 0px;
       min-height: 95px;
       border-bottom: 3px solid #f8d63e;
+      z-index: 1000;
     }
 
     .main-logo {
@@ -738,7 +751,7 @@ hr{
         width: 40px;
         height: 40px;
         background-color: rgba(255, 255, 255, 0.5);
-        z-index: 40000;
+        z-index: 900;
         position: absolute;
         cursor: pointer;
         text-align: center;
@@ -752,7 +765,7 @@ hr{
         width: 40px;
         height: 40px;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 40000;
+        z-index: 900;
         position: absolute;
         cursor: none;
         text-align: center;

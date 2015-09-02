@@ -18,10 +18,11 @@ angular.module('72TownsendApp')
         $state.go('list');
     };
   
-    $scope.slides = [ {image: "images/mobile_landing_one.png"},
-    				  {image: "images/mobile_north.png"},
-    				  {image: "images/mobile_west.png"},
-    				  {image: "images/mobile_south.png"}];          
+    $scope.slides = [ 
+    				  {image: "images/views/mobile_north.png", text: "North Elevation"},
+    				  {image: "images/views/mobile_west.png", text: "West Elevation"},
+    				  {image: "images/views/mobile_south.png", text: "South Elevation"},
+              {image: "images/views/mobile_east.png", text: "East Elevation"}];          
 
 
     $scope.openLandingModal = function openLandingModal() {
