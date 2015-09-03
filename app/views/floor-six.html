@@ -30,7 +30,7 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-12 col-md-12" style="position:relative">
+                <div class="col-sm-12 col-md-12" style="position:relative" ng-show="showFloor">
                     <img src="images/floors/floor4-7_desktop.png" class="floor-main hidden-xs">
                          <button ng-class="checkUnitSold(601) ? 'image-overlay-sold': 'image-overlay'" 
                               style="top:63%;left:78%"
@@ -201,7 +201,7 @@
     </div>    
     
     <div class="row">
-        <div class="col-sm-12 col-xs-12" style="position:relative">
+        <div class="col-sm-12 col-xs-12" style="position:relative" ng-show="showFloor">
             <img src="images/floors/floor4-7_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white">
                <button ng-class="checkUnitSold(601) ? 'image-overlay-mobile-sold': 'image-overlay-mobile'" 
                      style="top:12%;left:58%"

@@ -30,7 +30,7 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-12 col-md-12" style="position:relative">
+                <div class="col-sm-12 col-md-12" style="position:relative" ng-show="showFloor">
                     <img src="images/floors/floor9_desktop.png" class="floor-main hidden-xs">
                          <div class="image-overlay" style="top:62%;left:66%" ng-click="displayUnit(901)"></div>
                          <div class="image-overlay" style="top:62%;left:37%" ng-click="displayUnit(902)"></div>
@@ -69,7 +69,7 @@
     </div>    
     
     <div class="row">
-        <div class="col-sm-12 col-xs-12" style="position:relative">
+        <div class="col-sm-12 col-xs-12" style="position:relative" ng-show="showFloor">
             <img src="images/floors/floor9_mobile.png" class="floor-main-floor hidden-lg hidden-sm hidden-md" style="background-color:white;margin-left:0px">
             <div class="image-overlay-mobile" style="top:23%;left:21%" ng-click="displayUnit(904)"></div>
             <div class="image-overlay-mobile" style="top:60%;left:62%" ng-click="displayUnit(902)"></div>

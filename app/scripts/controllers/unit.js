@@ -26,7 +26,7 @@ angular.module('72TownsendApp')
 
     $modal.open({
       animation: true,
-      templateUrl: '../../views/balcony-modal.html',
+      templateUrl: 'views/balcony-modal.html',
       controller: 'ModalCtrl',
       size: 'lg',
       resolve: {

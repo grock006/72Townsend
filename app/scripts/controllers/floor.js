@@ -3,6 +3,8 @@
 angular.module('72TownsendApp')
   .controller('FloorCtrl', function($rootScope, $scope, $filter, $modal, $state, $http) {
 
+     $scope.showFloor = false;
+
      $http.get("72Townsend.json")
         .success( function(data){
             $scope.test = data;
@@ -15,6 +17,7 @@ angular.module('72TownsendApp')
             return unitSold;
           }
 
+           $scope.showFloor = true; 
         
         });
 
