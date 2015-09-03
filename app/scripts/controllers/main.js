@@ -9,10 +9,6 @@
  */
 angular.module('72TownsendApp')
   .controller('MainCtrl', function($scope, $state, $rootScope, $modal) {
-
-    $scope.testFunction = function testFunction(){
-      console.log("hey")
-    }
     
 
     $scope.selectBedrooms = function selectBedrooms(num){

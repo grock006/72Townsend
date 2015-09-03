@@ -3,6 +3,9 @@
 angular.module('72TownsendApp')
   .controller('FloorCtrl', function($rootScope, $scope, $filter, $modal, $state, $http) {
 
+    //need to get floor #
+    //get the state
+
      $scope.showFloor = false;
 
      $http.get("72Townsend.json")

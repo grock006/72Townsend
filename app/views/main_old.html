@@ -1,32 +1,6 @@
 <!-- desktop landing -->
 <div class="landing-wrapper">
-  <div class="row hidden-xs">
-
-    <div class="col-md-12">
-          <img id="map"src="images/72Townsend_EastView.png" height="535" width="1201" usemap="#floorbar">
-          <map name="floorbar">
-           <!--  <area shape="rect" coords="0,0,600,600" ui-sref="floorthree" ng-mouseover="testFunction()"> -->
-            <area id="floor9" href="#" shape="poly" coords="628,110,628,158,1122,156,1116,104,1117,152,1115,107,1112,101" 
-            maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":0.6}'
-            ng-mouseover="testFunction()">
-             <area alt="" title="" href="#" shape="poly" coords="528,162,530,206,1179,204,1181,159" 
-             maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"00ff00","fillOpacity":1}'
-             ng-mouseover="testFunction()">
-           <!--  <area shape="circle" coords="90,58,3" href="/" alt="Mercury">
-            <area shape="circle" coords="124,58,8" href="/" alt="Venus"> -->
-          </map>
-          <!-- image map -->
-          <!-- <div class="floor-wrapper">
-              <div style="background-color:black;width:10vw;height:6vh;"></div>
-                  <div style="background-color:purple;width:10vw;height:6vh;"></div>
-                  <div style="background-color:orange;width:10vw;height:6vh;"></div>
-                  <div style="background-color:red;width:10vw;height:6vh;"></div>
-                  <div style="background-color:blue;width:10vw;height:6vh;"></div>
-                  <div style="background-color:green;width:10vw;height:6vh;"></div>
-                  <div style="background-color:magenta;width:10vw;height:6vh;"></div>
-          </div>        -->
-     </div>  
-
+  <div class="main-building-image hidden-xs">
           <div class="button-wrapper hidden-xs">
               <h3>EXPLORE 72 TOWNSEND</h3>
 
@@ -48,7 +22,7 @@
                             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                       </button>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-                        <li><a id="floorlink" ui-sref="floorthree">FLOOR 3</a></li>
+                        <li><a ui-sref="floorthree">FLOOR 3</a></li>
                         <li><a ui-sref="floorfour">FLOOR 4</a></li>
                         <li><a ui-sref="floorfive">FLOOR 5</a></li>
                         <li><a ui-sref="floorsix">FLOOR 6</a></li>
@@ -142,16 +116,3 @@
     </div>
   </div>
 <!-- mobile -->
-
-<script type="text/javascript">
-$(function() {
-        $("#map").maphilight();
-});
-
-$('#floorlink').mouseover(function(e) {
-    $('#floor9').mouseover();
-}).mouseout(function(e) {
-    $('#floor9').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-</script>
