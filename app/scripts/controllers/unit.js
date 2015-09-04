@@ -10,6 +10,11 @@
 angular.module('72TownsendApp')
   .controller('UnitCtrl', function($scope, $state, $rootScope, $modal) {
 
+    if($rootScope.unitNumber === undefined){
+        $state.go('/');
+    }
+
+
     $scope.showNext = function showNext(filteredListItems, unitListIndex){
       if (filteredListItems.length !== unitListIndex + 1){
         $rootScope.unitNumber = $rootScope.filteredListItems[unitListIndex + 1];

@@ -28,6 +28,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 html {
   font-family: 'Helvetica Neue';
+  overflow-x: hidden;
 }
 
 .responsive-background{
@@ -53,7 +54,7 @@ html {
     border-color: #090909;
     min-height: 127px;
     border-bottom: 10px solid #f8d63e;
-    padding: 0px 42px;
+    padding: 0px 46px 0px 16px;
     z-index: 1000;
 }
 
@@ -171,6 +172,13 @@ html {
     bottom: 0px;
 }
 
+ span.glyphicon-remove-circle {
+    float:right;
+    color:white;
+    font-size:35px;
+    padding-bottom:3px
+}
+
 /* List Styles */
 
 .list-wrapper{
@@ -280,7 +288,12 @@ hr{
     border-bottom: 1px solid rgba(225,187,1,0.9);
     border-left: 1px solid rgba(225,187,1,0.8);
     font-weight: bold;
-    padding: 11px 20px;
+    padding: 11px 13px;
+}
+
+.unit-container{
+  width:100%;
+  padding-left: 45px;
 }
 
 /* Floor Styles */
@@ -376,6 +389,26 @@ hr{
 }
 
 /////* End Desktop Custom Styles*///////////////////////////////////
+
+////* Custom Mid-Sized Styles *////////////////////////////////////////
+
+@media only screen and (min-width: 769px) and (max-width: 1090px) {
+
+    .button-wrapper{
+
+        button{
+          width: 200px;
+        }
+
+        h3{
+          letter-spacing: 0px
+        }
+
+    }
+
+}
+
+////* End Custom Mid-Sized Styles *////////////////////////////////////////
 
 ////* Custom Tablet Styles *////////////////////////////////////////
 
@@ -570,6 +603,11 @@ hr{
 
      /* Floor Styles */
 
+     .mobile-floor-wrapper {
+         background-color:white;
+         margin-top:85px;
+     }
+
      .floor-main-floor {
        width: 100%;
        margin-left: -24px;
@@ -616,13 +654,17 @@ hr{
   /* Navbar Styles */
     .navbar-inverse {
       padding: 0px;
-      min-height: 95px;
+      min-height: 85px;
       border-bottom: 3px solid #f8d63e;
       z-index: 1000;
     }
 
     .main-logo {
       width: 70%;
+    }
+
+    .navbar-brand{
+      padding: 15px 6px;
     }
 
     /* Landing Styles*/
@@ -681,6 +723,10 @@ hr{
       height: 213px;
     }
 
+    span.glyphicon-remove-circle {
+      font-size:20px;
+    }
+
     /* List Styles */
 
     .list-wrapper{ 
@@ -705,8 +751,9 @@ hr{
     /* Unit Styles */
 
     .mobile-unit-wrapper{
-      margin-top: 92px;
+      margin-top: 82px;
       margin-bottom: 10%;
+      z-index:100000000;
     }
 
     .mobile-unit-image{
@@ -755,6 +802,11 @@ hr{
         font-size: 25px;
         padding: 10px 0px;
         z-index: 10000000;
+     }
+
+     .mobile-floor-wrapper {
+         background-color:white;
+         margin-top:85px;
      }
 
      .mobile-floor-unit-wrapper{
