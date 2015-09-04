@@ -34,6 +34,7 @@ angular.module('72TownsendApp')
             $scope.bedroomText = 'ALL';
         }
 
+        $('.dropdown').removeClass('open');
     };
 
     $scope.selectSort = function selectSort(str){
@@ -63,6 +64,8 @@ angular.module('72TownsendApp')
         if(str === '-interiorSqFt'){
             $scope.sortText = 'Square Footage: High To Low';
         }
+
+        $('.dropdown').removeClass('open');
     };
 
 
