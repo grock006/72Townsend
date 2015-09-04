@@ -76,9 +76,8 @@
 <div class="container hidden-sm hidden-md hidden-lg mobile-unit-wrapper">
     <div class="row mobile-unit-nav">
       <div class="col-xs-2 col-sm-4">
-        <a href="#" 
-          ng-click="showPrevious(filteredListItems, unitListIndex)"
-          ng-disabled="unitListIndex === 0"> 
+        <a ng-disabled="unitListIndex === 0"
+          ng-click="showPrevious(filteredListItems, unitListIndex)"> 
               <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
         </a>
       </div>
@@ -87,9 +86,9 @@
         <a ui-sref="{{floorNumber}}" ng-hide="listShow">Back To Floor</a>
       </div>
       <div class="col-xs-1 col-sm-4">
-        <a href="#" 
+        <a  ng-disabled="filteredListItems.length === unitListIndex + 1"
           ng-click="showNext(filteredListItems, unitListIndex)"
-          ng-disabled="filteredListItems.length === unitListIndex + 1">
+         >
            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
       </div>
     </div>
