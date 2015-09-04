@@ -6,13 +6,13 @@
                  <div class="row">
                     <div class="col-xs-12 col-sm-11 col-md-11 select-group">
 
-                          <div auto-close="always" dropdown>
+                          <div dropdown>
                             <button type="button" class="btn" dropdown-toggle>
-                              {{bedrooms}}{{bedroomText}} BEDROOM<span ng-show="bedrooms !== '1'">S</span>
+                              {{bedroomText}} BEDROOM
                               <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-                              <li><a ng-click="selectListBedroom()">ALL BEDROOMS</a></li>
+                              <li><a ng-click="selectListBedroom('')">ALL BEDROOMS</a></li>
                               <li><a ng-click="selectListBedroom(1)">1 BEDROOM</a></li>
                               <li><a ng-click="selectListBedroom(2)">2 BEDROOMS</a></li>
                               <li><a ng-click="selectListBedroom(3)">3 BEDROOMS</a></li>

@@ -1,29 +1,6 @@
 <!-- desktop landing -->
-<div class="landing-wrapper" style="max-width: 1381px;
-margin: 0 auto !important;
-float: none !important;">
-  <div class="row hidden-xs">
-
-    <div class="col-md-12">
-          <img id="map"src="images/72Townsend_EastViewLARGE.png" height="615" width="1381" usemap="#floorbar">
-          <map name="floorbar">
-              <area id="floor9" ui-sref="floornine" shape="poly" coords="719,123,719,186,1285,183,1284,119"
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-             <area id="floor8" ui-sref="flooreight" shape="poly" coords="603,185,603,242,1357,239,1356,181" 
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-               <area id="floor7" ui-sref="floorseven" shape="poly" coords="391,243,390,290,1356,286,1358,241,1354,239"
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-               <area id="floor6" ui-sref="floorsix" shape="poly" coords="391,292,389,343,1357,337,1357,288" 
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-              <area id="floor5" ui-sref="floorfive" shape="poly" coords="389,346,390,392,1358,386,1358,335"
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-              <area id="floor4" ui-sref="floorfour" shape="poly" coords="390,394,391,445,1357,437,1357,388"
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-               <area id="floor3" ui-sref="floorthree" shape="poly" coords="391,448,393,497,1358,494,1358,439"
-              maphilight='{"strokeColor":"000000","strokeWidth":2,"fillColor":"000000","fillOpacity":0.6}'>
-          </map>
-     </div>  
-
+<div class="landing-wrapper">
+  <div class="main-building-image hidden-xs">
           <div class="button-wrapper hidden-xs">
               <h3>EXPLORE 72 TOWNSEND</h3>
 
@@ -45,13 +22,13 @@ float: none !important;">
                             <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                       </button>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-                        <li><a id="floorlink3" ui-sref="floorthree">FLOOR 3</a></li>
-                        <li><a id="floorlink4" ui-sref="floorfour">FLOOR 4</a></li>
-                        <li><a id="floorlink5" ui-sref="floorfive">FLOOR 5</a></li>
-                        <li><a id="floorlink6" ui-sref="floorsix">FLOOR 6</a></li>
-                        <li><a id="floorlink7" ui-sref="floorseven">FLOOR 7</a></li>
-                        <li><a id="floorlink8" ui-sref="flooreight">FLOOR 8</a></li>
-                        <li><a id="floorlink9" ui-sref="floornine">FLOOR 9</a></li>
+                        <li><a ui-sref="floorthree">FLOOR 3</a></li>
+                        <li><a ui-sref="floorfour">FLOOR 4</a></li>
+                        <li><a ui-sref="floorfive">FLOOR 5</a></li>
+                        <li><a ui-sref="floorsix">FLOOR 6</a></li>
+                        <li><a ui-sref="floorseven">FLOOR 7</a></li>
+                        <li><a ui-sref="flooreight">FLOOR 8</a></li>
+                        <li><a ui-sref="floornine">FLOOR 9</a></li>
                       </ul>
                     </div>
 
@@ -62,6 +39,15 @@ float: none !important;">
                 </button>
           </div>
           
+           <!-- <div class="floor-wrapper">
+              <div style="background-color:black;width:500px;height:65px;"></div>
+                  <div style="background-color:purple;width:500px;height:60px;"></div>
+                  <div style="background-color:orange;width:500px;height:60px;"></div>
+                  <div style="background-color:red;width:500px;height:60px;"></div>
+                  <div style="background-color:blue;width:500px;height:60px;"></div>
+                  <div style="background-color:green;width:500px;height:60px;"></div>
+                  <div style="background-color:magenta;width:500px;height:60px;"></div>
+          </div>        -->
   </div>
 </div>
 <!-- end desktop landing -->
@@ -130,80 +116,3 @@ float: none !important;">
     </div>
   </div>
 <!-- mobile -->
-
-<script type="text/javascript">
-
-$(document).ready(function(e) {
-    $('img[usemap]').rwdImageMaps();
-});
-
-$.fn.maphilight.defaults = {
-  fill: true,
-  fillColor: '000000',
-  fillOpacity: 0.4,
-  stroke: true,
-  strokeColor: '000000',
-  strokeOpacity: 0.2,
-  strokeWidth: 0,
-  fade: true,
-  alwaysOn: false,
-  neverOn: false,
-  groupBy: false,
-  wrapClass: true,
-  shadow: false,
-  shadowX: 0,
-  shadowY: 0,
-  shadowRadius: 6,
-  shadowColor: '000000',
-  shadowOpacity: 0.8,
-  shadowPosition: 'outside',
-  shadowFrom: false
-}
-
-$(function() {
-        $("#map").maphilight();
-});
-
-$('#floorlink9').mouseover(function(e) {
-    $('#floor9').mouseover();
-}).mouseout(function(e) {
-    $('#floor9').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink8').mouseover(function(e) {
-    $('#floor8').mouseover();
-}).mouseout(function(e) {
-    $('#floor8').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink7').mouseover(function(e) {
-    $('#floor7').mouseover();
-}).mouseout(function(e) {
-    $('#floor7').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink6').mouseover(function(e) {
-    $('#floor6').mouseover();
-}).mouseout(function(e) {
-    $('#floor6').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink5').mouseover(function(e) {
-    $('#floor5').mouseover();
-}).mouseout(function(e) {
-    $('#floor5').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink4').mouseover(function(e) {
-    $('#floor4').mouseover();
-}).mouseout(function(e) {
-    $('#floor4').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-$('#floorlink3').mouseover(function(e) {
-    $('#floor3').mouseover();
-}).mouseout(function(e) {
-    $('#floor3').mouseout();
-}).click(function(e) { e.preventDefault(); });
-
-</script>

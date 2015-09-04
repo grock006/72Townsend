@@ -12,13 +12,24 @@ angular.module('72TownsendApp')
   	$scope.sort = "floor";
     $scope.sortText = "sort by";
 
+    if($rootScope.bedrooms == 3){
+        $scope.bedroomText = "3"
+        console.log($scope.bedroomText)
+    }
+    if($rootScope.bedrooms == 2){
+        $scope.bedroomText = "2"
+    }
+    if($rootScope.bedrooms == 1){
+        $scope.bedroomText = "1"
+    }
+
      $scope.selectListBedroom = function selectListBedroom(num){
-        if(Number.isInteger(num)){
+        if(num !== ''){
             var number = num.toString();
             $rootScope.bedrooms = number;
-            $scope.bedroomText = '';
+            $scope.bedroomText = number;
         }
-        else{
+        if(num === ''){
             $rootScope.bedrooms = '';
             $scope.bedroomText = 'ALL';
         }
