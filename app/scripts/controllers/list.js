@@ -14,7 +14,6 @@ angular.module('72TownsendApp')
 
     if($rootScope.bedrooms == 3){
         $scope.bedroomText = "3"
-        console.log($scope.bedroomText)
     }
     if($rootScope.bedrooms == 2){
         $scope.bedroomText = "2"
