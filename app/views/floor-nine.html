@@ -1,8 +1,9 @@
 <!-- desktop floor -->
+<div class="container floor-container">
 <div class="row hidden-xs" style="background-color:white;margin-top:100px" ng-hide="floorHidden">
     <div class="col-sm-12 col-md-12 col-lg-12 hidden-xs" style="position:relative">
 
-            <div class="row" style="margin-bottom:10px">
+            <div class="row floor-button-wrapper">
                 <div class="col-sm-4 col-md-5"></div>
                 <div class="col-sm-4 col-md-2">
                     <br>
@@ -82,6 +83,7 @@
               
     </div>
 </div>
+</div>
 <!-- end desktop floor -->
 
 <!-- mobile floor -->
@@ -102,7 +104,7 @@
                         <li><a ui-sref="floorsix">FLOOR 6</a></li>
                         <li><a ui-sref="floorseven">FLOOR 7</a></li>
                         <li><a ui-sref="flooreight">FLOOR 8</a></li>
-                        <li><a ui-sref="floornine">FLOOR 9</a></li>
+                        <li><a class="floor-active" ui-sref="floornine">FLOOR 9</a></li>
                       </ul>
                     </div>          
         </div>

@@ -71,7 +71,7 @@ html {
 /*  Landing Page Styles */
 
 .main-building-image {
-    background: url('../images/test.png') no-repeat;
+    background: url('../images/72Townsend_main_landing.png') no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     background-size: contain;
@@ -164,10 +164,6 @@ html {
 
 /* Modal Styles */
 
-.modal-body {
-    height: 623px;
-}
-
 .carousel-indicators {
     bottom: 0px;
 }
@@ -180,6 +176,11 @@ html {
 }
 
 /* List Styles */
+
+.list-container{
+  width:100%;
+  padding: 0px 45px;
+}
 
 .list-wrapper{
     margin-top:127px;
@@ -229,6 +230,7 @@ html {
       margin-bottom: 5px;
       font-size: 12px;
       letter-spacing: 2px;
+      float:right;
     }
 
     .btn:active{
@@ -269,6 +271,12 @@ html {
     line-height: 15px;
 }
 
+h1.unit-header{
+  color:white;
+  font-size:23px;
+  margin-top:5px;
+}
+
 h2 {
     color: white;
     font-size: 13px;
@@ -293,7 +301,7 @@ hr{
 
 .unit-container{
   width:100%;
-  padding-left: 45px;
+  padding: 0px 45px;
 }
 
 /* Floor Styles */
@@ -306,6 +314,16 @@ hr{
        @include linear-gradient(top,rgba(253,211,40,1) 0%,rgba(242,199,26,1) 100%);
     }
 }
+
+.floor-container{
+  width:100%;
+  padding: 0px 45px;
+  background-color: white;
+}
+
+.floor-button-wrapper{
+      margin: 0px 0px 30px 0px;
+  }
 
 
 .floor-main {
@@ -322,7 +340,7 @@ hr{
     border-bottom: 1px solid rgba(225,187,1,0.9);
     border-left: 1px solid rgba(225,187,1,0.8);
     font-weight: bold;
-    padding: 11px 77px;
+    padding: 11px 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
 } 
@@ -481,6 +499,11 @@ hr{
     }
 
     /* List Styles */
+
+    .list-container {
+      width: inherit;
+      padding: 0 15px;
+    }
 
     .list-wrapper{ 
       margin-top: 40px;
@@ -661,6 +684,7 @@ hr{
 
     .main-logo {
       width: 70%;
+      margin: -5px 0px;
     }
 
     .navbar-brand{
@@ -733,6 +757,12 @@ hr{
       margin-top: 40px;
     }
 
+    .list-container {
+      width: inherit;
+      padding: 0 15px;
+    }
+
+
     .select-group {
       margin: 53px 0px 20px 0px;
 
@@ -757,7 +787,7 @@ hr{
     }
 
     .mobile-unit-image{
-      width:300px;
+      width:100%;
       margin-top:5px;
     }
 

@@ -2,7 +2,7 @@
  <div class="container unit-container hidden-xs">
     <div class="row unit-wrapper hidden-xs">
         <div class="col-sm-4 col-md-4 text-center hidden-xs">
-            <h1 style="color:white;font-size:23px">Unit {{unitNumber.unit}} {{favoriteCookie}}<br> Plan {{unitNumber.planId}}</h1>
+            <h1 class="unit-header">Unit {{unitNumber.unit}} {{favoriteCookie}}<br> Plan {{unitNumber.planId}}</h1>
             <div class="yellow-border">
                 <h2>SQUARE FOOTAGE<br> {{unitNumber.interiorSqFt}}</h2>
                 <hr>
@@ -26,7 +26,7 @@
             <br>
         </div>
         <div class="col-sm-8 col-md-8 hidden-xs" style="position:relative">
-            <div class="row" style="padding:0px">
+            <div class="row" style="padding:0 0 10px 0">
                     <div class="col-sm-2 col-md-2">    
                          <button class="btn btn-default balcony-button" ui-sref="list" ng-show="listShow">
                             <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
@@ -39,29 +39,32 @@
 
                     </div>
 
-                    <div class="col-sm-3 col-md-6"></div>     
+                    <div class="col-sm-4 col-md-4"></div>     
 
-                    <div class="col-sm-7 col-md-4">
-                         <button class="btn btn-default balcony-button" class="balcony-button" 
-                         ng-click="showPrevious(filteredListItems, unitListIndex)"
-                         ng-disabled="unitListIndex === 0">
-                               <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                            PREVIOUS 
-                         </button>            
-                
-                          <button class="btn btn-default balcony-button" 
-                            ng-click="showNext(filteredListItems, unitListIndex)"
-                            ng-disabled="filteredListItems.length === unitListIndex + 1"> NEXT
-                                 <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                          </button> 
+                    <div class="col-sm-6 col-md-6">
+
+                        <div style="float:right">
+                           <button class="btn btn-default balcony-button" class="balcony-button" 
+                           ng-click="showPrevious(filteredListItems, unitListIndex)"
+                           ng-disabled="unitListIndex === 0">
+                                 <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                              PREVIOUS 
+                           </button>            
+                  
+                            <button class="btn btn-default balcony-button" 
+                              ng-click="showNext(filteredListItems, unitListIndex)"
+                              ng-disabled="filteredListItems.length === unitListIndex + 1"> NEXT
+                                   <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                            </button> 
+                          </div>
+
                      </div> 
 
                 </div>
-                <br>
+                
                 <div class="row hidden-xs">
-                  <div class="col-sm-2 col-md-2 col-lg-2"></div>
-                  <div class="col-sm-10 col-md-10 col-lg-10">
-                        <img ng-src="{{unitNumber.planImage}}" style="width:65%">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                        <img ng-src="{{unitNumber.planImage}}" style="height:500px;display:block;margin:0 auto;">
                   </div>
                 </div>
             </div>
