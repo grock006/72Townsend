@@ -1,5 +1,4 @@
 $fa-font-path: "../bower_components/font-awesome/fonts";
-// @import "font-awesome/scss/font-awesome";
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
@@ -396,7 +395,7 @@ hr{
 .inner-text-sold {
     margin: auto;
     position: absolute;
-    color: gray;
+    color: #bfbfbf;
     top: 0;
     left: 0;
     bottom: 0;
@@ -568,7 +567,7 @@ hr{
       .inner-text-mobile-sold {
           margin: auto;
           position: absolute;
-          color: gray;
+          color: #bfbfbf;
           top: 0;
           left: 0;
           bottom: 0;
@@ -895,7 +894,7 @@ hr{
       .inner-text-mobile-sold {
           margin: auto;
           position: absolute;
-          color: gray;
+          color: #bfbfbf;
           top: 0;
           left: 0;
           bottom: 0;
